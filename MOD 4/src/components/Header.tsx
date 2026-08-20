@@ -84,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
           className={`tab-btn ${activeTab === 'calibration' ? 'active' : ''}`}
           onClick={() => onTabChange('calibration')}
         >
-          Conformal / Calibration
+          Calibration
         </button>
       </nav>
     </header>

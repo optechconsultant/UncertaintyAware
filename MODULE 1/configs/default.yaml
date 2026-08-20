@@ -1,0 +1,13 @@
+generation:
+  llm_model: "llama3.2:latest" 
+  temperature: 1.0     
+  num_samples: 10 
+  options: {}
+
+# Embedding 
+embedding:
+  embedding_model: "nomic-embed-text" 
+
+judge:
+  judge_model: "llama3.2:latest"
+  temperature: 0.1
