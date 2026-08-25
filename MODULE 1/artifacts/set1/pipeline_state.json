@@ -7,10 +7,10 @@
     "scorer_method": "semantic_entropy",
     "calibration_metadata": {
         "alpha": 0.1,
-        "q_hat": 0.2775280104064451,
-        "theta_low": 0.33983435491443437,
+        "q_hat": 0.0,
+        "theta_low": 0.0,
         "theta_high": 0.0,
-        "total_samples": 200,
-        "correct_samples": 144
+        "total_samples": 20,
+        "correct_samples": 13
     }
 }

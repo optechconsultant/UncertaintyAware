@@ -1,13 +1,22 @@
 generation:
-  llm_model: "llama3.2:latest" 
-  temperature: 1.0     
-  num_samples: 10 
+  llm_model: "llama3.2:latest"
+  temperature: 1.0
+  num_samples: 10
   options: {}
 
-# Embedding 
 embedding:
-  embedding_model: "nomic-embed-text" 
+  embedding_model: "nomic-embed-text"
 
 judge:
   judge_model: "llama3.2:latest"
   temperature: 0.1
+
+scorer:
+  semantic_entropy:
+    use_exact_match: false
+    #   nomic-embed-text      -> 0.95
+    #   mxbai-embed-large     -> 0.90
+    #   all-minilm-l6-v2      -> 0.85
+    similarity_threshold: 0.95
+  mahalanobis:
+    normalization_scale: 5.0

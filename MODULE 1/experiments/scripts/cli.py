@@ -4,6 +4,7 @@ import json
 import argparse
 import random
 import yaml
+import numpy as np
 from tqdm import tqdm
 
 try:
@@ -160,7 +161,16 @@ def main():
     else:
         method, dataset_path, limit = interactive_menu(data_dir)
 
-    method_kwargs = {'use_exact_match': False} if method == 'semantic_entropy' else {'normalization_scale': 5.0}
+    scorer_cfg = config.get('scorer', {})
+    if method == 'semantic_entropy':
+        se_cfg = scorer_cfg.get('semantic_entropy', {})
+        method_kwargs = {
+            'use_exact_match': se_cfg.get('use_exact_match', False),
+            'similarity_threshold': se_cfg.get('similarity_threshold', 0.95),
+        }
+    else:
+        mah_cfg = scorer_cfg.get('mahalanobis', {})
+        method_kwargs = {'normalization_scale': mah_cfg.get('normalization_scale', 5.0)}
 
     clear_screen()
     print("-------------------------------------------------")
@@ -200,6 +210,26 @@ def main():
         print(f"  q_hat (Cutoff) : {scorer.q_hat:.4f}")
         print(f"  theta_low      : {scorer.theta_low:.4f} (PASS zone)")
         print(f"  theta_high     : {scorer.theta_high:.4f} (FLAG zone)")
+        print("-------------------------------------------------")
+
+        # Signal validation: wrong answers should score higher than correct ones.
+        # If both means are equal the scorer has no predictive power.
+        import json
+        with open(os.path.join(artifacts_dir, 'calibration_results.json')) as _f:
+            _cal = json.load(_f)
+        _sep = _cal.get('separation_stats', {})
+        _correct_mean = _sep.get('correct_mean', 0.0)
+        _wrong_mean   = _sep.get('wrong_mean')
+        print("\n--- Signal Validation ---")
+        if _wrong_mean is None:
+            print("  [WARN] No wrong examples in calibration set — cannot validate signal.")
+        elif _wrong_mean <= _correct_mean:
+            print(f"  [WARN] wrong_mean ({_wrong_mean:.4f}) <= correct_mean ({_correct_mean:.4f})")
+            print("         Scorer has NO predictive signal. q_hat is meaningless.")
+            print("         Check: similarity_threshold, embedding model, or data quality.")
+        else:
+            print(f"  [OK]   wrong_mean ({_wrong_mean:.4f}) > correct_mean ({_correct_mean:.4f})")
+            print("         Scorer has predictive signal. Calibration is valid.")
         print("-------------------------------------------------\n")
     except Exception as e:
         print(f"\n[ERROR] Calibration failed: {e}")

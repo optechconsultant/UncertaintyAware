@@ -92,7 +92,8 @@ class Scorer:
         self.theta_low = float(np.percentile(correct_scores, 95))
         self.theta_high = float(np.percentile(wrong_scores, 5)) if len(wrong_scores) > 0 else 1.0
 
-        os.makedirs(artifacts_dir, exist_ok=True)
+        method_artifacts_dir = os.path.join(artifacts_dir, self.method)
+        os.makedirs(method_artifacts_dir, exist_ok=True)
 
         calibration_results = {
             "method": self.method,
@@ -110,7 +111,7 @@ class Scorer:
             "raw_pairs": [{"score": float(s), "is_correct": bool(l)} for s, l in zip(scores, labels)]
         }
 
-        with open(os.path.join(artifacts_dir, 'calibration_results.json'), 'w') as f:
+        with open(os.path.join(method_artifacts_dir, 'calibration_results.json'), 'w') as f:
             json.dump(calibration_results, f, indent=4)
 
         pipeline_state = {
@@ -130,6 +131,6 @@ class Scorer:
             }
         }
 
-        with open(os.path.join(artifacts_dir, 'pipeline_state.json'), 'w') as f:
+        with open(os.path.join(method_artifacts_dir, 'pipeline_state.json'), 'w') as f:
             json.dump(pipeline_state, f, indent=4)
 

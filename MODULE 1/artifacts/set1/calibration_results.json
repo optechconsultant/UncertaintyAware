@@ -1,0 +1,96 @@
+{
+    "method": "semantic_entropy",
+    "alpha": 0.1,
+    "q_hat": 0.0,
+    "theta_low": 0.0,
+    "theta_high": 0.0,
+    "total_samples": 20,
+    "correct_samples": 13,
+    "wrong_samples": 7,
+    "separation_stats": {
+        "correct_mean": 0.0,
+        "wrong_mean": 0.0
+    },
+    "raw_pairs": [
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        }
+    ]
+}

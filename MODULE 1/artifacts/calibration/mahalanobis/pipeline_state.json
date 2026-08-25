@@ -4,13 +4,13 @@
     "embedding_model": "nomic-embed-text",
     "temperature": 1.0,
     "num_samples": 10,
-    "scorer_method": "semantic_entropy",
+    "scorer_method": "mahalanobis",
     "calibration_metadata": {
         "alpha": 0.1,
-        "q_hat": 0.2775280104064451,
-        "theta_low": 0.33983435491443437,
-        "theta_high": 0.0,
-        "total_samples": 200,
-        "correct_samples": 144
+        "q_hat": 0.9990737302530701,
+        "theta_low": 0.9991293203241005,
+        "theta_high": 0.9972354029368082,
+        "total_samples": 40,
+        "correct_samples": 29
     }
 }
