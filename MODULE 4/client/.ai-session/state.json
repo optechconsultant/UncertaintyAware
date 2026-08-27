@@ -1,0 +1,27 @@
+{
+  "last_updated": "2026-08-13T13:43:00Z",
+  "completed": [
+    "Build Inference Dashboard view",
+    "Implement exact Figma wireframe specification for Conformal / Calibration dashboard",
+    "Add 5 summary metric cards (Calibration status, q̂, α, Drift status, Calibration file)",
+    "Add Calibration file upload progress card (3 of 8 files processed)",
+    "Add Calibration score distribution histogram with q̂ threshold position marker and recalibration action",
+    "Add Calibration outputs key-value table (q̂, θ_low, θ_high, Separation, cal_scores, cal_labels, Last calibrated, LLM model)",
+    "Add Coverage / calibration evaluation card (Target coverage 1 - α vs Observed coverage)",
+    "Add Drift & recalibration card (Drift status, Drift type, Recalibration status, Recent audit events)",
+    "Implement dynamic header subtitle for Calibration view",
+    "Implement quantile weight JSON exporter",
+    "Implement real-time pipeline telemetry stream",
+    "Implement audit logging system"
+  ],
+  "in_progress": [],
+  "pending": [],
+  "decisions": [
+    {
+      "context": "User provided an exact wireframe design screenshot for the Conformal / Calibration screen",
+      "decision": "Rebuilt CalibrationDashboard to mirror the wireframe layout 1:1, including upload progress bar, score distribution histogram with q̂ line, calibration outputs table, coverage evaluation card, and drift/recalibration log",
+      "trade_offs": "Fully aligned with user wireframe specification while retaining live interactive recalculation logic"
+    }
+  ],
+  "blockers": []
+}
