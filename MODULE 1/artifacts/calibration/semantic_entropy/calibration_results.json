@@ -1,0 +1,96 @@
+{
+    "method": "semantic_entropy",
+    "alpha": 0.1,
+    "q_hat": 0.2775280104064451,
+    "theta_low": 0.2775280104064451,
+    "theta_high": 0.34822537285722394,
+    "total_samples": 20,
+    "correct_samples": 3,
+    "wrong_samples": 17,
+    "separation_stats": {
+        "correct_mean": 0.09250933680214836,
+        "wrong_mean": 0.22721091226267923
+    },
+    "raw_pairs": [
+        {
+            "score": 0.40843137199002016,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.5903089986991943,
+            "is_correct": false
+        },
+        {
+            "score": 0.2775280104064451,
+            "is_correct": false
+        },
+        {
+            "score": 0.2775280104064451,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.2775280104064451,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.6505149978319904,
+            "is_correct": false
+        },
+        {
+            "score": 0.34822537285722394,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.2775280104064451,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.0,
+            "is_correct": false
+        },
+        {
+            "score": 0.14118174150460758,
+            "is_correct": false
+        },
+        {
+            "score": 0.0,
+            "is_correct": true
+        },
+        {
+            "score": 0.30102999566398114,
+            "is_correct": false
+        },
+        {
+            "score": 0.5903089986991943,
+            "is_correct": false
+        }
+    ]
+}

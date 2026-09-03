@@ -1,0 +1,260 @@
+{
+    "method": "mahalanobis",
+    "alpha": 0.1,
+    "q_hat": 0.536581299001577,
+    "theta_low": 0.536581299001577,
+    "theta_high": 0.9999970792060969,
+    "total_samples": 61,
+    "correct_samples": 50,
+    "wrong_samples": 11,
+    "separation_stats": {
+        "correct_mean": 0.4499150412811488,
+        "wrong_mean": 0.999991273293258
+    },
+    "raw_pairs": [
+        {
+            "score": 0.39496810690773976,
+            "is_correct": true
+        },
+        {
+            "score": 0.5054896675779451,
+            "is_correct": true
+        },
+        {
+            "score": 0.4439788436937899,
+            "is_correct": true
+        },
+        {
+            "score": 0.4769353529208965,
+            "is_correct": true
+        },
+        {
+            "score": 0.40903896801827533,
+            "is_correct": true
+        },
+        {
+            "score": 0.5014571873611579,
+            "is_correct": true
+        },
+        {
+            "score": 0.2559248076961058,
+            "is_correct": true
+        },
+        {
+            "score": 0.4349386793843333,
+            "is_correct": true
+        },
+        {
+            "score": 0.5431443768269149,
+            "is_correct": true
+        },
+        {
+            "score": 0.42561030422487023,
+            "is_correct": true
+        },
+        {
+            "score": 0.5047410601682468,
+            "is_correct": true
+        },
+        {
+            "score": 0.5229356263750926,
+            "is_correct": true
+        },
+        {
+            "score": 0.44485882644594277,
+            "is_correct": true
+        },
+        {
+            "score": 0.5468887435643688,
+            "is_correct": true
+        },
+        {
+            "score": 0.4195592101085811,
+            "is_correct": true
+        },
+        {
+            "score": 0.34136949251633497,
+            "is_correct": true
+        },
+        {
+            "score": 0.5023802310382329,
+            "is_correct": true
+        },
+        {
+            "score": 0.4633390318856798,
+            "is_correct": true
+        },
+        {
+            "score": 0.351749879735212,
+            "is_correct": true
+        },
+        {
+            "score": 0.37414957043644637,
+            "is_correct": true
+        },
+        {
+            "score": 0.4302556350448906,
+            "is_correct": true
+        },
+        {
+            "score": 0.4471990418296098,
+            "is_correct": true
+        },
+        {
+            "score": 0.49616894964056724,
+            "is_correct": true
+        },
+        {
+            "score": 0.5090633590309104,
+            "is_correct": true
+        },
+        {
+            "score": 0.5665006879157685,
+            "is_correct": true
+        },
+        {
+            "score": 0.37633941439752494,
+            "is_correct": true
+        },
+        {
+            "score": 0.2934669186648734,
+            "is_correct": true
+        },
+        {
+            "score": 0.3655368254143577,
+            "is_correct": true
+        },
+        {
+            "score": 0.5105781871393101,
+            "is_correct": true
+        },
+        {
+            "score": 0.4462415251120513,
+            "is_correct": true
+        },
+        {
+            "score": 0.49483474198863553,
+            "is_correct": true
+        },
+        {
+            "score": 0.4864594240693473,
+            "is_correct": true
+        },
+        {
+            "score": 0.46782325934697633,
+            "is_correct": true
+        },
+        {
+            "score": 0.3508031922609598,
+            "is_correct": true
+        },
+        {
+            "score": 0.5280106685192897,
+            "is_correct": true
+        },
+        {
+            "score": 0.4286251603069351,
+            "is_correct": true
+        },
+        {
+            "score": 0.38898628863920603,
+            "is_correct": true
+        },
+        {
+            "score": 0.46441821266792394,
+            "is_correct": true
+        },
+        {
+            "score": 0.4818429293755889,
+            "is_correct": true
+        },
+        {
+            "score": 0.46623618275787815,
+            "is_correct": true
+        },
+        {
+            "score": 0.4380870308418543,
+            "is_correct": true
+        },
+        {
+            "score": 0.48347330440004266,
+            "is_correct": true
+        },
+        {
+            "score": 0.5659633765182497,
+            "is_correct": true
+        },
+        {
+            "score": 0.5116355534229937,
+            "is_correct": true
+        },
+        {
+            "score": 0.4842430423904428,
+            "is_correct": true
+        },
+        {
+            "score": 0.3644601095695794,
+            "is_correct": true
+        },
+        {
+            "score": 0.35089852426116386,
+            "is_correct": true
+        },
+        {
+            "score": 0.40802272575711385,
+            "is_correct": true
+        },
+        {
+            "score": 0.4895385268856478,
+            "is_correct": true
+        },
+        {
+            "score": 0.536581299001577,
+            "is_correct": true
+        },
+        {
+            "score": 0.9999970792060969,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999724253044786,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999810343145948,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999973884684495,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999993391783043,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999959207331143,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999971259128884,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999981329706189,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999686889771197,
+            "is_correct": false
+        },
+        {
+            "score": 0.9999968711601733,
+            "is_correct": false
+        },
+        {
+            "score": 1.0,
+            "is_correct": false
+        }
+    ]
+}   

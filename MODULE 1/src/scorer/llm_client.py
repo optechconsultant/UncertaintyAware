@@ -40,6 +40,7 @@ class LLMClient:
         normed = embeddings / np.clip(norms, a_min=1e-10, a_max=None)
         return normed @ normed.T
     def evaluate_correctness(self, question: str, generated_answer: str, reference_answers: List[str]) -> bool:
+        import re
         refs = "\n- ".join(reference_answers)
         system_prompt = JUDGE_SYSTEM_PROMPT
 
@@ -58,20 +59,31 @@ class LLMClient:
             options={'temperature': self.judge_temp}
         )
 
-        result_text = response['message']['content'].strip().upper()
-        if 'TRUE' in result_text:
-            return True
-        return False
+        result_text = response['message']['content'].strip()
+        match = re.search(r'\b(TRUE|FALSE)\b', result_text, re.IGNORECASE)
+        if match:
+            return match.group(1).upper() == 'TRUE'
+        return result_text.upper().startswith('TRUE')
+
     def process_record(self, record: dict) -> Dict:
         try:
             question = record['question']
             reference_answers = record.get('correct_answers', [record.get('best_answer', '')])
 
-            output, samples = self.generate_output_and_samples(question)
+            _, samples = self.generate_output_and_samples(question)
 
             sample_embeddings = self.get_embeddings_batch(samples)
             similarity_matrix = self.compute_cosine_similarity_matrix(sample_embeddings)
-            primary_embedding = sample_embeddings[0]
+
+            # Select consensus output as the medoid (highest average similarity)
+            if similarity_matrix is not None and len(samples) > 0:
+                avg_similarities = similarity_matrix.mean(axis=1)
+                medoid_idx = int(np.argmax(avg_similarities))
+                output = samples[medoid_idx]
+                primary_embedding = sample_embeddings[medoid_idx]
+            else:
+                output = samples[0] if samples else ""
+                primary_embedding = sample_embeddings[0] if len(sample_embeddings) > 0 else np.zeros(1)
 
             is_correct = self.evaluate_correctness(question, output, reference_answers)
 
@@ -79,6 +91,7 @@ class LLMClient:
                 'question': question,
                 'output': output,
                 'samples': samples,
+                'reference_answers': reference_answers,
                 'embedding': primary_embedding,
                 'similarity_matrix': similarity_matrix,
                 'is_correct': is_correct,
@@ -88,8 +101,9 @@ class LLMClient:
             print(f"[Fault] Error processing record: {e}")
             return {
                 'question': record.get('question'),
-                'output': e,
+                'output': str(e),
                 'samples': [],
+                'reference_answers': record.get('correct_answers', [record.get('best_answer', '')]),
                 'embedding': np.zeros(1),
                 'similarity_matrix': None,
                 'is_correct': False,

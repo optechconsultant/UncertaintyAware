@@ -113,10 +113,38 @@ def select_menu(title: str, options: list) -> int:
     else:
         return select_menu_fallback(title, options)
 
-def interactive_menu(data_dir: str):
-    method_options = ["Semantic Entropy (Method 3)", "Mahalanobis Distance (Method 4)"]
+def get_available_models():
+    try:
+        import ollama
+        res = ollama.list()
+        raw_list = res.models if hasattr(res, 'models') else res.get('models', [])
+        models = []
+        for m in raw_list:
+            name = m.model if hasattr(m, 'model') else m.get('name', '')
+            if name and 'embed' not in name.lower():
+                models.append(name)
+        return models if models else ["llama3.2:1b", "llama3.2:latest"]
+    except Exception:
+        return ["llama3.2:1b", "llama3.2:latest"]
+
+def interactive_menu(data_dir: str, default_gen_model: str, default_judge_model: str):
+    method_options = [
+        "Semantic Entropy (Method 3)",
+        "Mahalanobis Distance (Method 4)"
+    ]
     method_idx = select_menu("Select a candidate method:", method_options)
     method = 'semantic_entropy' if method_idx == 0 else 'mahalanobis'
+
+    available_models = get_available_models()
+
+    gen_idx = select_menu("Select Generation Model (to test/calibrate):", available_models)
+    gen_model = available_models[gen_idx]
+
+    judge_options = [m for m in available_models if m != gen_model]
+    if not judge_options:
+        judge_options = available_models
+    judge_idx = select_menu(f"Select Judge Model (evaluates correctness, distinct from '{gen_model}'):", judge_options)
+    judge_model = judge_options[judge_idx]
 
     files = get_data_files(data_dir)
     if not files:
@@ -127,8 +155,10 @@ def interactive_menu(data_dir: str):
     dataset_path = os.path.join(data_dir, files[dataset_idx])
 
     clear_screen()
-    print(f"Selected Method  : {method_options[method_idx]}")
-    print(f"Selected Dataset : {files[dataset_idx]}\n")
+    print(f"Selected Method      : {method_options[method_idx]}")
+    print(f"Generation Model     : {gen_model}")
+    print(f"Judge Model          : {judge_model}")
+    print(f"Selected Dataset     : {files[dataset_idx]}\n")
 
     limit_input = input("How many questions to process? (Leave blank for ALL): ").strip()
     limit = None
@@ -139,11 +169,13 @@ def interactive_menu(data_dir: str):
         except ValueError:
             limit = None
 
-    return method, dataset_path, limit
+    return method, gen_model, judge_model, dataset_path, limit
 
 def main():
     parser = argparse.ArgumentParser(description="Conformal Guard Scorer CLI")
     parser.add_argument('--method', type=str, choices=['semantic_entropy', 'mahalanobis'])
+    parser.add_argument('--model', type=str, help="Generation LLM model name")
+    parser.add_argument('--judge-model', type=str, help="Evaluation judge model name")
     parser.add_argument('--dataset', type=str)
     parser.add_argument('--limit', type=int)
 
@@ -156,10 +188,23 @@ def main():
 
     if args.method and args.dataset:
         method = args.method
+        gen_model = args.model or config['generation']['llm_model']
+        judge_model = args.judge_model or config['judge']['judge_model']
         dataset_path = os.path.join(data_dir, args.dataset)
         limit = args.limit
     else:
-        method, dataset_path, limit = interactive_menu(data_dir)
+        method, gen_model, judge_model, dataset_path, limit = interactive_menu(
+            data_dir,
+            config['generation']['llm_model'],
+            config['judge']['judge_model']
+        )
+
+    if gen_model == judge_model:
+        print(f"\n[Warning] Generation model and Judge model are both '{gen_model}'.")
+        print("          Using distinct models avoids self-evaluation bias.\n")
+
+    config['generation']['llm_model'] = gen_model
+    config['judge']['judge_model'] = judge_model
 
     scorer_cfg = config.get('scorer', {})
     if method == 'semantic_entropy':
@@ -172,11 +217,16 @@ def main():
         mah_cfg = scorer_cfg.get('mahalanobis', {})
         method_kwargs = {'normalization_scale': mah_cfg.get('normalization_scale', 5.0)}
 
+    clean_model_name = gen_model.replace(':', '_').replace('/', '_')
+    artifacts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../artifacts/calibration'))
+    method_artifacts_dir = os.path.join(artifacts_dir, clean_model_name, method)
+
     clear_screen()
     print("-------------------------------------------------")
     print(f"> Processing Dataset : {os.path.basename(dataset_path)}")
     print(f"> Method             : {method}")
-    print(f"> Generation Model   : {config['generation']['llm_model']}")
+    print(f"> Generation Model   : {gen_model}")
+    print(f"> Judge Model        : {judge_model}")
     print(f"> Limit              : {'ALL' if limit is None else limit} questions")
     print("-------------------------------------------------\n")
 
@@ -199,40 +249,109 @@ def main():
         else:
             scorer.candidate.fit(np.array(correct_train_embs))
 
-    artifacts_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../artifacts/calibration'))
     print(f"\nRunning Calibration (alpha=0.10) on Calibration split...")
 
     try:
         scorer.calibrate(calib_processed, alpha=0.10, config=config, artifacts_dir=artifacts_dir)
         print("\nCalibration Complete!")
-        print(f"Results saved to: {artifacts_dir}")
+        print(f"Results saved to: {method_artifacts_dir}")
         print("\n--- Conformal Thresholds ---")
         print(f"  q_hat (Cutoff) : {scorer.q_hat:.4f}")
         print(f"  theta_low      : {scorer.theta_low:.4f} (PASS zone)")
         print(f"  theta_high     : {scorer.theta_high:.4f} (FLAG zone)")
         print("-------------------------------------------------")
 
-        # Signal validation: wrong answers should score higher than correct ones.
-        # If both means are equal the scorer has no predictive power.
-        import json
-        with open(os.path.join(artifacts_dir, 'calibration_results.json')) as _f:
+        with open(os.path.join(method_artifacts_dir, 'calibration_results.json')) as _f:
             _cal = json.load(_f)
         _sep = _cal.get('separation_stats', {})
         _correct_mean = _sep.get('correct_mean', 0.0)
-        _wrong_mean   = _sep.get('wrong_mean')
+        _wrong_mean = _sep.get('wrong_mean')
+
         print("\n--- Signal Validation ---")
         if _wrong_mean is None:
-            print("  [WARN] No wrong examples in calibration set — cannot validate signal.")
+            print("  [WARN] No wrong examples in calibration set.")
         elif _wrong_mean <= _correct_mean:
             print(f"  [WARN] wrong_mean ({_wrong_mean:.4f}) <= correct_mean ({_correct_mean:.4f})")
-            print("         Scorer has NO predictive signal. q_hat is meaningless.")
-            print("         Check: similarity_threshold, embedding model, or data quality.")
+            print("         Scorer has no predictive separation.")
         else:
             print(f"  [OK]   wrong_mean ({_wrong_mean:.4f}) > correct_mean ({_correct_mean:.4f})")
-            print("         Scorer has predictive signal. Calibration is valid.")
-        print("-------------------------------------------------\n")
+            print("         Scorer has predictive signal.")
+        print("-------------------------------------------------")
+
+        if splits['evaluation']:
+            eval_processed = process_split(splits['evaluation'], llm_client, "Evaluation")
+            print("\n--- Out-of-Sample Evaluation ---")
+
+            eval_records = []
+            pass_count = 0
+            review_count = 0
+            flag_count = 0
+            pass_wrong_count = 0
+
+            for item in eval_processed:
+                score, _ = scorer.compute_nonconformity(
+                    item.get('output'),
+                    samples=item.get('samples'),
+                    embedding=item.get('embedding'),
+                    similarity_matrix=item.get('similarity_matrix')
+                )
+                decision = scorer.classify(score)
+                is_correct = bool(item.get('is_correct', False))
+
+                if decision == "PASS":
+                    pass_count += 1
+                    if not is_correct:
+                        pass_wrong_count += 1
+                elif decision == "FLAG":
+                    flag_count += 1
+                else:
+                    review_count += 1
+
+                eval_records.append({
+                    "question": item.get("question", ""),
+                    "output": item.get("output", ""),
+                    "samples": item.get("samples", []),
+                    "reference_answers": item.get("reference_answers", []),
+                    "score": float(score),
+                    "decision": decision,
+                    "is_correct": is_correct
+                })
+
+            total_eval = len(eval_processed)
+            pass_rate = (pass_count / total_eval) * 100 if total_eval > 0 else 0
+            pass_error_rate = (pass_wrong_count / pass_count) * 100 if pass_count > 0 else 0
+
+            print(f"  Total Samples   : {total_eval}")
+            print(f"  PASS Decisions  : {pass_count} ({pass_rate:.1f}%)")
+            print(f"  REVIEW Decisions: {review_count} ({(review_count / total_eval) * 100:.1f}%)")
+            print(f"  FLAG Decisions  : {flag_count} ({(flag_count / total_eval) * 100:.1f}%)")
+            print(f"  PASS Error Rate : {pass_error_rate:.1f}% (target: <= 10.0%)")
+
+            from datetime import datetime
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            eval_results = {
+                "method": method,
+                "timestamp": timestamp,
+                "model": config.get('generation', {}).get('llm_model', 'unknown'),
+                "total_samples": total_eval,
+                "pass_count": pass_count,
+                "review_count": review_count,
+                "flag_count": flag_count,
+                "pass_error_rate": pass_error_rate / 100.0,
+                "records": eval_records
+            }
+
+            eval_dir = method_artifacts_dir
+            with open(os.path.join(eval_dir, f'evaluation_results_{timestamp}.json'), 'w') as f:
+                json.dump(eval_results, f, indent=4)
+            with open(os.path.join(eval_dir, 'evaluation_results.json'), 'w') as f:
+                json.dump(eval_results, f, indent=4)
+
+            print(f"\nEvaluation saved to: {eval_dir}")
+            print("-------------------------------------------------\n")
+
     except Exception as e:
-        print(f"\n[ERROR] Calibration failed: {e}")
+        print(f"\n[ERROR] Process failed: {e}")
 
 if __name__ == "__main__":
     main()

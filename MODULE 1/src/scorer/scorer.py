@@ -50,9 +50,10 @@ class Scorer:
     def calibrate(self, 
                   calibration_data: List[Dict[str, Any]], 
                   alpha: float, 
-                  config: dict,
+                  config: Optional[dict] = None,
                   artifacts_dir: str = '../artifacts/calibration'):
         self.alpha = alpha
+        config = config or {}
 
         scores = []
         labels = []
@@ -89,14 +90,47 @@ class Scorer:
         else:
             self.q_hat = float(sorted_correct[target_idx])
 
-        self.theta_low = float(np.percentile(correct_scores, 95))
-        self.theta_high = float(np.percentile(wrong_scores, 5)) if len(wrong_scores) > 0 else 1.0
+        self.theta_low = self.q_hat
+        if len(wrong_scores) > 0:
+            wrong_median = float(np.percentile(wrong_scores, 50))
+            if wrong_median > self.q_hat:
+                self.theta_high = wrong_median
+            else:
+                wrong_p75 = float(np.percentile(wrong_scores, 75))
+                self.theta_high = float(max(self.q_hat, wrong_p75))
+        else:
+            self.theta_high = 1.0
 
-        method_artifacts_dir = os.path.join(artifacts_dir, self.method)
+        # Safety guarantee: theta_high must always be >= theta_low
+        self.theta_high = float(max(self.theta_low, self.theta_high))
+
+        model_name = config.get('generation', {}).get('llm_model', '')
+        if model_name:
+            clean_model_name = model_name.replace(':', '_').replace('/', '_')
+            method_artifacts_dir = os.path.join(artifacts_dir, clean_model_name, self.method)
+        else:
+            method_artifacts_dir = os.path.join(artifacts_dir, self.method)
         os.makedirs(method_artifacts_dir, exist_ok=True)
+
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        raw_pairs = []
+        for item, s, l in zip(calibration_data, scores, labels):
+            raw_pairs.append({
+                "question": item.get("question", ""),
+                "output": item.get("output", ""),
+                "samples": item.get("samples", []),
+                "reference_answers": item.get("reference_answers", []),
+                "score": float(s),
+                "is_correct": bool(l)
+            })
 
         calibration_results = {
             "method": self.method,
+            "model_name": config.get('generation', {}).get('llm_model', 'unknown'),
+            "judge_model": config.get('judge', {}).get('judge_model', 'unknown'),
+            "timestamp": timestamp,
             "alpha": self.alpha,
             "q_hat": self.q_hat,
             "theta_low": self.theta_low,
@@ -108,14 +142,18 @@ class Scorer:
                 "correct_mean": float(np.mean(correct_scores)),
                 "wrong_mean": float(np.mean(wrong_scores)) if len(wrong_scores) > 0 else None
             },
-            "raw_pairs": [{"score": float(s), "is_correct": bool(l)} for s, l in zip(scores, labels)]
+            "raw_pairs": raw_pairs
         }
+
+        with open(os.path.join(method_artifacts_dir, f'calibration_results_{timestamp}.json'), 'w') as f:
+            json.dump(calibration_results, f, indent=4)
 
         with open(os.path.join(method_artifacts_dir, 'calibration_results.json'), 'w') as f:
             json.dump(calibration_results, f, indent=4)
 
         pipeline_state = {
             "scorer_version": "1.1.0",
+            "timestamp": timestamp,
             "model_name": config.get('generation', {}).get('llm_model', 'unknown'),
             "embedding_model": config.get('embedding', {}).get('embedding_model', 'unknown'),
             "temperature": config.get('generation', {}).get('temperature', 0.0),
@@ -131,6 +169,27 @@ class Scorer:
             }
         }
 
+        with open(os.path.join(method_artifacts_dir, f'pipeline_state_{timestamp}.json'), 'w') as f:
+            json.dump(pipeline_state, f, indent=4)
+
         with open(os.path.join(method_artifacts_dir, 'pipeline_state.json'), 'w') as f:
             json.dump(pipeline_state, f, indent=4)
+
+    def classify(self, score: float) -> str:
+        """
+        Classifies a nonconformity score into one of three operational routes:
+        - PASS: score <= theta_low (within conformal guarantee boundary)
+        - FLAG: score >= theta_high (high risk of error)
+        - REVIEW: theta_low < score < theta_high (indeterminate / borderline)
+        """
+        if self.theta_low is None or self.theta_high is None:
+            raise RuntimeError("Scorer must be calibrated before calling classify().")
+
+        if score <= self.theta_low:
+            return "PASS"
+        elif score >= self.theta_high:
+            return "FLAG"
+        else:
+            return "REVIEW"
+
 

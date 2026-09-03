@@ -1,0 +1,16 @@
+{
+    "scorer_version": "1.1.0",
+    "model_name": "llama3.2:1b",
+    "embedding_model": "nomic-embed-text",
+    "temperature": 1.0,
+    "num_samples": 10,
+    "scorer_method": "semantic_entropy",
+    "calibration_metadata": {
+        "alpha": 0.1,
+        "q_hat": 0.2775280104064451,
+        "theta_low": 0.2775280104064451,
+        "theta_high": 0.34822537285722394,
+        "total_samples": 20,
+        "correct_samples": 3
+    }
+}

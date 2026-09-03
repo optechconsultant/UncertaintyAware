@@ -1,8 +1,7 @@
 generation:
-  llm_model: "llama3.2:latest"
+  llm_model: "llama3.2:1b"
   temperature: 1.0
   num_samples: 10
-  options: {}
 
 embedding:
   embedding_model: "nomic-embed-text"

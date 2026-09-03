@@ -1,16 +1,16 @@
 {
     "scorer_version": "1.1.0",
-    "model_name": "llama3.2:latest",
-    "embedding_model": "nomic-embed-text",
-    "temperature": 1.0,
-    "num_samples": 10,
+    "model_name": "unknown",
+    "embedding_model": "unknown",
+    "temperature": 0.0,
+    "num_samples": 0,
     "scorer_method": "mahalanobis",
     "calibration_metadata": {
         "alpha": 0.1,
-        "q_hat": 0.9990737302530701,
-        "theta_low": 0.9991293203241005,
-        "theta_high": 0.9972354029368082,
-        "total_samples": 40,
-        "correct_samples": 29
+        "q_hat": 0.536581299001577,
+        "theta_low": 0.536581299001577,
+        "theta_high": 0.9999970792060969,
+        "total_samples": 61,
+        "correct_samples": 50
     }
 }
