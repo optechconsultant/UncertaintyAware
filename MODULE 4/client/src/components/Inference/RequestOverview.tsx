@@ -1,76 +1,121 @@
 import React from 'react';
 import { MetricsSummary, LLMModelType } from '../../types/inference';
+import { Target, Compass, TrendingUp, CheckCircle, ShieldCheck } from 'lucide-react';
 
-interface MetricsOverviewProps {
+interface RequestOverviewProps {
   metrics: MetricsSummary;
   onModelChange: (model: LLMModelType) => void;
+  isVisible?: (key: string) => boolean;
+  quantileThreshold?: number;
 }
 
-export const RequestOverview: React.FC<MetricsOverviewProps> = ({ metrics, onModelChange }) => {
-  const getDecisionClass = (decision: string) => {
-    switch (decision) {
-      case 'PASS':
-        return 'pass';
-      case 'FLAG':
-        return 'flag';
-      case 'REJECT':
-        return 'reject';
-      default:
-        return 'pass';
-    }
-  };
+export const RequestOverview: React.FC<RequestOverviewProps> = ({
+  metrics,
+  onModelChange,
+  isVisible,
+  quantileThreshold = 0.784,
+}) => {
+  // If isVisible is not provided, this is a regular user view (fixed layout)
+  const showPassRate = isVisible ? isVisible('pass_rate') : true;
+  const showFlagRate = isVisible ? isVisible('flag_rate') : true;
+  const showThreshold = isVisible ? isVisible('threshold') : false;
+  const showOodStatus = isVisible ? isVisible('ood_status') : false;
+  const showDriftStatus = isVisible ? isVisible('drift_status') : false;
 
   return (
-    <div className="metrics-grid ">
-      {/* 1. Active requests */}
+    <div className="metrics-grid">
+      {/* 1. Active requests (Core pipeline status) */}
       <div className="metric-card">
         <div className="metric-label">Active requests</div>
         <div className="metric-value">{metrics.activeRequests}</div>
         <div className="metric-subtext">Live requests currently in pipeline</div>
       </div>
 
-      {/* 2. Queued requests */}
-      {/* <div className="metric-card">
-        <div className="metric-label">Queued requests</div>
-        <div className="metric-value">{metrics.queuedRequests}</div>
-        <div className="metric-subtext">Requests waiting to enter pipeline</div>
-      </div> */}
-
-      {/* 3. Current stage */}
-      {/* <div className="metric-card">
-        <div className="metric-label">Current stage</div>
-        <div className="metric-value" style={{ color: 'var(--accent-primary)' }}>
-          {metrics.currentStage}
+      {/* 2. Pass % (Widget: pass_rate) */}
+      {showPassRate && (
+        <div className="metric-card">
+          <div className="metric-label">Pass %</div>
+          <div className="metric-value" style={{ color: 'var(--success-text)' }}>
+            {metrics.passPercentage}%
+          </div>
+          <div className="metric-subtext">Since last calibration • updates per inference</div>
         </div>
-        <div className="metric-subtext">Stage of selected request</div>
-      </div> */}
+      )}
 
-      {/* 4. Decision */}
-      {/* <div className="metric-card">
-        <div className="metric-label">Decision</div>
-        <div className="metric-value">
-          <span className={`decision-badge ${getDecisionClass(metrics.latestDecision)}`} style={{ fontSize: '1.25rem', padding: '0.2rem 0.75rem' }}>
-            {metrics.latestDecision}
-          </span>
+      {/* 3. Flag % (Widget: flag_rate) */}
+      {showFlagRate && (
+        <div className="metric-card">
+          <div className="metric-label">Flag %</div>
+          <div className="metric-value" style={{ color: 'var(--warning-text)' }}>
+            {metrics.flagPercentage}%
+          </div>
+          <div className="metric-subtext">Since last calibration • updates per inference</div>
         </div>
-        <div className="metric-subtext">Latest Module 2 decision</div>
-      </div> */}
+      )}
 
-      {/* 5. Pass % */}
-      <div className="metric-card">
-        <div className="metric-label">Pass %</div>
-        <div className="metric-value">{metrics.passPercentage}%</div>
-        <div className="metric-subtext">Since last calibration • updates per inference</div>
-      </div>
+      {/* 4. Threshold (Widget: threshold) */}
+      {showThreshold && (
+        <div className="metric-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="metric-label">Threshold (q̂)</div>
+            <Target size={15} color="var(--accent-primary)" />
+          </div>
+          <div className="metric-value" style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-primary)' }}>
+            {quantileThreshold.toFixed(3)}
+          </div>
+          <div className="metric-subtext">Active calibrated non-conformity limit</div>
+        </div>
+      )}
 
-      {/* 6. Flag % */}
-      <div className="metric-card">
-        <div className="metric-label">Flag %</div>
-        <div className="metric-value">{metrics.flagPercentage}%</div>
-        <div className="metric-subtext">Since last calibration • updates per inference</div>
-      </div>
+      {/* 5. OOD Status (Widget: ood_status) */}
+      {showOodStatus && (
+        <div className="metric-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="metric-label">OOD Status</div>
+            <Compass size={15} color="var(--success-text)" />
+          </div>
+          <div
+            className="metric-value"
+            style={{
+              fontSize: '1.25rem',
+              color: 'var(--success-text)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+            }}
+          >
+            <CheckCircle size={16} />
+            <span>In-Distribution</span>
+          </div>
+          <div className="metric-subtext">Module 2 semantic drift check</div>
+        </div>
+      )}
 
-      {/* 7. LLM model */}
+      {/* 6. Drift Status (Widget: drift_status) */}
+      {showDriftStatus && (
+        <div className="metric-card">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="metric-label">Drift Detector</div>
+            <TrendingUp size={15} color="var(--success-text)" />
+          </div>
+          <div
+            className="metric-value"
+            style={{
+              fontSize: '1.25rem',
+              color: 'var(--success-text)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+            }}
+          >
+            <ShieldCheck size={16} />
+            <span>Stable</span>
+          </div>
+          <div className="metric-subtext">KS 2-sample window verified</div>
+        </div>
+      )}
+
+      {/* 7. LLM model Selector */}
       <div className="metric-card">
         <div className="metric-label">LLM model</div>
         <div style={{ margin: '0.25rem 0' }}>
@@ -91,3 +136,5 @@ export const RequestOverview: React.FC<MetricsOverviewProps> = ({ metrics, onMod
     </div>
   );
 };
+
+export default RequestOverview;

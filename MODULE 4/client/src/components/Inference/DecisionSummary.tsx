@@ -8,6 +8,7 @@ interface SelectedRequestInspectorProps {
   onSelectRequest: (reqId: string) => void;
   onOpenTrace: () => void;
   quantileThreshold: number;
+  isVisible?: (key: string) => boolean;
 }
 
 export const DecisionSummary: React.FC<SelectedRequestInspectorProps> = ({
@@ -15,7 +16,8 @@ export const DecisionSummary: React.FC<SelectedRequestInspectorProps> = ({
   allRequests,
   onSelectRequest,
   onOpenTrace,
-  quantileThreshold
+  quantileThreshold,
+  isVisible,
 }) => {
   const getDecisionBadge = (decision: string) => {
     switch (decision) {
@@ -32,6 +34,10 @@ export const DecisionSummary: React.FC<SelectedRequestInspectorProps> = ({
 
   const isBelowThreshold = request.nonConformityScore <= quantileThreshold;
   const scorePct = Math.min(100, Math.round(request.nonConformityScore * 100));
+
+  // Determine visibility based on developer preferences (defaults to true if user view)
+  const showCurrentAnswer = isVisible ? isVisible('current_answer') : true;
+  const showConformalScore = isVisible ? isVisible('conformal_score') : true;
 
   return (
     <div className="panel-card">
@@ -71,36 +77,52 @@ export const DecisionSummary: React.FC<SelectedRequestInspectorProps> = ({
         </div>
       </div>
 
-      <div className="question-box" style={{ minHeight: '92px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-muted)', fontWeight: 600 }}>
-          Question
-        </span>
-        <h3 className="question-title">{request.question}</h3>
-      </div>
+      {/* Active Question Box (current_answer) */}
+      {showCurrentAnswer && (
+        <div
+          className="question-box"
+          style={{ minHeight: '92px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
+        >
+          <span
+            style={{
+              fontSize: '0.75rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.05em',
+              color: 'var(--text-muted)',
+              fontWeight: 600,
+            }}
+          >
+            Question
+          </span>
+          <h3 className="question-title">{request.question}</h3>
+        </div>
+      )}
 
       <div className="details-grid">
-        {/* Module 1 • Non-conformity score */}
-        <div>
-          <div className="detail-item-title">Module 1 • Non-conformity score</div>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.4rem' }}>
-            <span className="detail-item-value">{request.nonConformityScore.toFixed(2)}</span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-              (Threshold q̂ = {quantileThreshold.toFixed(3)})
-            </span>
+        {/* Module 1 • Non-conformity score (Widget: conformal_score) - collapses cleanly when hidden */}
+        {showConformalScore && (
+          <div>
+            <div className="detail-item-title">Module 1 • Non-conformity score</div>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '0.4rem' }}>
+              <span className="detail-item-value">{request.nonConformityScore.toFixed(2)}</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                (Threshold q̂ = {quantileThreshold.toFixed(3)})
+              </span>
+            </div>
+            {/* Progress bar visual */}
+            <div style={{ background: 'var(--border-color)', height: '6px', borderRadius: '3px', overflow: 'hidden' }}>
+              <div
+                style={{
+                  width: `${scorePct}%`,
+                  height: '100%',
+                  backgroundColor: isBelowThreshold ? 'var(--accent-primary)' : 'var(--warning-text)',
+                  borderRadius: '3px',
+                  transition: 'width 0.3s ease',
+                }}
+              />
+            </div>
           </div>
-          {/* Progress bar visual */}
-          <div style={{ background: 'var(--border-color)', height: '6px', borderRadius: '3px', overflow: 'hidden' }}>
-            <div
-              style={{
-                width: `${scorePct}%`,
-                height: '100%',
-                backgroundColor: isBelowThreshold ? 'var(--accent-primary)' : 'var(--warning-text)',
-                borderRadius: '3px',
-                transition: 'width 0.3s ease'
-              }}
-            />
-          </div>
-        </div>
+        )}
 
         {/* Module 2 • Decision */}
         <div>
@@ -138,3 +160,5 @@ export const DecisionSummary: React.FC<SelectedRequestInspectorProps> = ({
     </div>
   );
 };
+
+export default DecisionSummary;

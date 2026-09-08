@@ -35,7 +35,15 @@ export const useInferenceStream = (
       const { id, rawScore, request } = generateMockInferenceRequest(globalModel, policy);
 
       // 2. Evaluate with Module 2
-      const rawMod2Result = await evaluateWithModule2(id, rawScore, quantileThreshold);
+      const rawMod2Result = await evaluateWithModule2(
+        id, 
+        request.question || '', 
+        'Simulated model output', 
+        rawScore, 
+        0.4, 
+        0.5, 
+        quantileThreshold
+      );
       const mod2Result = normalizeModule2Response(rawMod2Result);
 
       const isPass = mod2Result.decision === 'PASS';

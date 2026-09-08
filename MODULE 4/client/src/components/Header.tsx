@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Shield, Sun, Moon, Play, Pause, Terminal, Activity } from 'lucide-react';
 
 interface HeaderProps {
@@ -20,6 +21,8 @@ export const Header: React.FC<HeaderProps> = ({
   onToggleStreaming,
   onOpenAuditLogs
 }) => {
+  const navigate = useNavigate();
+
   return (
     <header className="header-container">
       <div className="header-top">
@@ -65,6 +68,15 @@ export const Header: React.FC<HeaderProps> = ({
           >
             <Terminal size={14} />
             <span>Audit Logs</span>
+          </button>
+
+          <button
+            className="btn-secondary"
+            onClick={() => navigate('/developer/login')}
+            title="Enter Developer Mode"
+          >
+            <Activity size={14} />
+            <span>Developer Mode</span>
           </button>
 
           <button

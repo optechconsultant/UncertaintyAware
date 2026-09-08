@@ -1,4 +1,5 @@
 import React, { useState, Suspense } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { InferenceDashboard } from './components/Inference/InferenceDashboard';
 import { CalibrationDashboard } from './components/Calibration/CalibrationDashboard';
@@ -10,15 +11,47 @@ import { useCalibration } from './hooks/useCalibration';
 import { useInferenceStream } from './hooks/useInferenceStream';
 import { useInferenceMetrics } from './hooks/useInferenceMetrics';
 
+// Developer Mode
+import { authService } from './auth/authService';
+import { DeveloperLogin } from './pages/DeveloperLogin';
+import { DeveloperDashboard } from './pages/DeveloperDashboard';
+import { AuthGuard } from './auth/AuthGuard';
+import { ForgotPassword } from './pages/ForgotPassword';
+import { ChangePassword } from './pages/ChangePassword';
+
+
 // Lazy loaded non-critical modals
 const AuditLogModal = React.lazy(() => import('./components/AuditLogModal').then(module => ({ default: module.AuditLogModal })));
 const ExecutionTraceModal = React.lazy(() => import('./components/ExecutionTraceModal').then(module => ({ default: module.ExecutionTraceModal })));
 
-export const App: React.FC = () => {
+const MainDashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'inference' | 'calibration'>('inference');
   const [isStreaming, setIsStreaming] = useState<boolean>(true);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState<boolean>(false);
   const [isTraceModalOpen, setIsTraceModalOpen] = useState<boolean>(false);
+  const [isDeveloper, setIsDeveloper] = useState<boolean>(false);
+
+  // Check viewer role via existing auth context / authService
+  React.useEffect(() => {
+    let isMounted = true;
+    const checkViewerRole = async () => {
+      try {
+        const session = await authService.getSession();
+        if (isMounted) {
+          const role = session?.role;
+          setIsDeveloper(role === 'developer' || role === 'admin');
+        }
+      } catch {
+        if (isMounted) {
+          setIsDeveloper(false);
+        }
+      }
+    };
+    checkViewerRole();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Use Custom Hooks for state orchestration
   const { isDarkMode, toggleTheme } = useTheme();
@@ -30,9 +63,6 @@ export const App: React.FC = () => {
     handleRecalibrate 
   } = useCalibration();
 
-  // We need to provide a default LLM model initially until requests load, 
-  // but inferenceService uses globalModel state to generate requests.
-  // Actually, handleModelChange updates it in stream hook, so we pass down an initial one if undefined.
   const { 
     requests, 
     selectedRequest, 
@@ -47,7 +77,6 @@ export const App: React.FC = () => {
 
   const metrics = useInferenceMetrics(requests, selectedRequest, lastCalibrationTime);
 
-  // Handler for Tab switching
   const handleTabChange = (tab: 'inference' | 'calibration') => {
     setActiveTab(tab);
     auditLogger.log('user', 'switch_tab', tab, { activeTab: tab });
@@ -55,7 +84,6 @@ export const App: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Header Navigation Bar */}
       <Header
         activeTab={activeTab}
         onTabChange={handleTabChange}
@@ -66,7 +94,6 @@ export const App: React.FC = () => {
         onOpenAuditLogs={() => setIsAuditModalOpen(true)}
       />
 
-      {/* Main Content Body */}
       <main className="main-content">
         {activeTab === 'inference' ? (
           selectedRequest ? (
@@ -78,6 +105,7 @@ export const App: React.FC = () => {
               onModelChange={handleModelChange}
               onOpenTrace={() => setIsTraceModalOpen(true)}
               quantileThreshold={calibrationParams?.quantileThreshold || 0}
+              isDeveloper={isDeveloper}
             />
           ) : (
             <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-muted)' }}>
@@ -90,6 +118,7 @@ export const App: React.FC = () => {
               params={calibrationParams}
               isRecalibrating={isRecalibrating}
               onRecalibrate={handleRecalibrate}
+              isDeveloper={isDeveloper}
             />
           ) : (
             <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-muted)' }}>
@@ -99,7 +128,6 @@ export const App: React.FC = () => {
         )}
       </main>
 
-      {/* Lazy Loaded Modals */}
       <Suspense fallback={null}>
         {isAuditModalOpen && (
           <AuditLogModal
@@ -118,6 +146,36 @@ export const App: React.FC = () => {
         )}
       </Suspense>
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainDashboard />} />
+        <Route path="/developer/login" element={<DeveloperLogin />} />
+        <Route path="/developer/forgot-password" element={<ForgotPassword />} />
+        <Route 
+
+          path="/developer/dashboard" 
+          element={
+            <AuthGuard>
+              <DeveloperDashboard />
+            </AuthGuard>
+          } 
+        />
+        <Route 
+          path="/developer/change-password" 
+          element={
+            <AuthGuard>
+              <ChangePassword />
+            </AuthGuard>
+          } 
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
