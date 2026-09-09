@@ -1,6 +1,6 @@
 {
     "scorer_version": "1.1.0",
-    "timestamp": "20260905_095825",
+    "timestamp": "20260904_095825",
     "model_name": "llama3.2:1b",
     "embedding_model": "nomic-embed-text",
     "temperature": 1.0,

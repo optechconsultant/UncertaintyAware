@@ -2,7 +2,7 @@
     "method": "semantic_entropy",
     "model_name": "llama3.2:1b",
     "judge_model": "llama3.2:latest",
-    "timestamp": "20260905_095825",
+    "timestamp": "20260904_095825",
     "alpha": 0.1,
     "q_hat": 0.5331092497698138,
     "theta_low": 0.5331092497698138,

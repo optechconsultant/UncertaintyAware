@@ -25,10 +25,7 @@ def get_data_files(data_dir: str):
     return [f for f in os.listdir(data_dir) if os.path.isfile(os.path.join(data_dir, f))]
 
 def load_and_split_dataset(filepath: str, limit: int = None, seed: int = 42):
-    """
-    Loads dataset, limits it if requested, and randomly splits into 
-    Train (40%), Calibration (40%), and Evaluation (20%).
-    """
+    # Loads and splits the Dataset into Train (40%), Calibration (40%), and Evaluation (20%)
     records = []
     with open(filepath, 'r', encoding='utf-8') as f:
         for line in f:
@@ -55,7 +52,6 @@ def load_and_split_dataset(filepath: str, limit: int = None, seed: int = 42):
     }
 
 def process_split(split_data, llm_client, split_name):
-    """Processes a list of records through the LLMClient."""
     processed = []
     print(f"\nProcessing {split_name} split ({len(split_data)} records) with Ollama...")
     for record in tqdm(split_data):
@@ -74,11 +70,11 @@ def select_menu_windows(title: str, options: list) -> int:
 
         for i, option in enumerate(options):
             if i == selected_idx:
-                print(f"  > {option}")
+                print(f" > {option}")
             else:
-                print(f"    {option}")
+                print(f"{option}")
 
-        print("\n(Use Up/Down Arrow keys to navigate, Enter to select)")
+        print("\n(Use Arrow keys)")
 
         key = msvcrt.getch()
         if key in (b'\xe0', b'\x00'):
@@ -155,10 +151,10 @@ def interactive_menu(data_dir: str, default_gen_model: str, default_judge_model:
     dataset_path = os.path.join(data_dir, files[dataset_idx])
 
     clear_screen()
-    print(f"Selected Method      : {method_options[method_idx]}")
-    print(f"Generation Model     : {gen_model}")
-    print(f"Judge Model          : {judge_model}")
-    print(f"Selected Dataset     : {files[dataset_idx]}\n")
+    print(f"Selected Method: {method_options[method_idx]}")
+    print(f"Generation Model: {gen_model}")
+    print(f"Judge Model: {judge_model}")
+    print(f"Selected Dataset - : {files[dataset_idx]}\n")
 
     limit_input = input("How many questions to process? (Leave blank for ALL): ").strip()
     limit = None

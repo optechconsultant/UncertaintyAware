@@ -1,6 +1,6 @@
 import ollama
 import numpy as np
-from typing import List, Tuple, Any, Dict
+from typing import List, Tuple,Dict
 
 from prompts.templates import JUDGE_SYSTEM_PROMPT, JUDGE_USER_PROMPT_TEMPLATE
 

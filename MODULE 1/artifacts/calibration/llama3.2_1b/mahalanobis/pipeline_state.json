@@ -1,17 +1,17 @@
 {
     "scorer_version": "1.1.0",
-    "timestamp": "20260905_095825",
+    "timestamp": "20260905_104204",
     "model_name": "llama3.2:1b",
     "embedding_model": "nomic-embed-text",
     "temperature": 1.0,
     "num_samples": 10,
-    "scorer_method": "semantic_entropy",
+    "scorer_method": "mahalanobis",
     "calibration_metadata": {
         "alpha": 0.1,
-        "q_hat": 0.5331092497698138,
-        "theta_low": 0.5331092497698138,
-        "theta_high": 0.5331092497698138,
+        "q_hat": 0.9997856289819211,
+        "theta_low": 0.9997856289819211,
+        "theta_high": 0.9997856289819211,
         "total_samples": 20,
-        "correct_samples": 11
+        "correct_samples": 13
     }
 }
