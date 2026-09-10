@@ -7,7 +7,7 @@ embedding:
   embedding_model: "nomic-embed-text"
 
 judge:
-  judge_model: "llama3.2:latest"
+  judge_model: "gemma4:latest"
   temperature: 0.1
 
 scorer:
@@ -19,6 +19,3 @@ scorer:
     similarity_threshold: 0.95
   mahalanobis:
     normalization_scale: 5.0
-
-
-    

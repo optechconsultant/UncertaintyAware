@@ -32,6 +32,7 @@ class SemanticEntropyScorer(BaseScorer):
         if len(probs) == 1:
             return 0.0
 
+        #shannon entropy
         entropy = -np.sum(probs * np.log(probs)) + 0.0
 
         max_entropy = np.log(n_samples)

@@ -1,6 +1,6 @@
 {
     "scorer_version": "1.1.0",
-    "timestamp": "20260910_112142",
+    "timestamp": "20260909_232949",
     "model_name": "llama3.2:1b",
     "embedding_model": "nomic-embed-text",
     "temperature": 1.0,
@@ -12,6 +12,6 @@
         "theta_low": 0.6505149978319904,
         "theta_high": 0.6505149978319904,
         "total_samples": 40,
-        "correct_samples": 28
+        "correct_samples": 27
     }
 }

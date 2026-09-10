@@ -101,7 +101,6 @@ class Scorer:
         else:
             self.theta_high = 1.0
 
-        # Safety guarantee: theta_high must always be >= theta_low
         self.theta_high = float(max(self.theta_low, self.theta_high))
 
         model_name = config.get('generation', {}).get('llm_model', '')
@@ -176,12 +175,6 @@ class Scorer:
             json.dump(pipeline_state, f, indent=4)
 
     def classify(self, score: float) -> str:
-        """
-        Classifies a nonconformity score into one of three operational routes:
-        - PASS: score <= theta_low (within conformal guarantee boundary)
-        - FLAG: score >= theta_high (high risk of error)
-        - REVIEW: theta_low < score < theta_high (indeterminate / borderline)
-        """
         if self.theta_low is None or self.theta_high is None:
             raise RuntimeError("Scorer must be calibrated before calling classify().")
 

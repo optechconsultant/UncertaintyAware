@@ -12,7 +12,7 @@ def normalize_distance(distance: Union[float, np.ndarray, List[float]],
     d_array = np.maximum(d_array, 0.0)
 
     normalized = 1.0 - np.exp(-d_array / scale_factor)
-
+    
     if is_float:
         return float(normalized)
     elif is_list:

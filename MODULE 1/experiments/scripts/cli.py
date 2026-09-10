@@ -63,9 +63,9 @@ def select_menu_windows(title: str, options: list) -> int:
     selected_idx = 0
     while True:
         clear_screen()
-        print("=================================================")
-        print("   Conformal Guard: Non-Conformity Scorer CLI    ")
-        print("=================================================\n")
+        print("*"*60)
+        print("Conformal Guard: Non-Conformity Scorer CLI")
+        print("*"*60)
         print(title + "\n")
 
         for i, option in enumerate(options):
@@ -113,6 +113,7 @@ def get_available_models():
     try:
         import ollama
         res = ollama.list()
+        # print(res)
         raw_list = res.models if hasattr(res, 'models') else res.get('models', [])
         models = []
         for m in raw_list:
@@ -218,17 +219,17 @@ def main():
     method_artifacts_dir = os.path.join(artifacts_dir, clean_model_name, method)
 
     clear_screen()
-    print("-------------------------------------------------")
+    print("-"*60)
     print(f"> Processing Dataset : {os.path.basename(dataset_path)}")
     print(f"> Method             : {method}")
     print(f"> Generation Model   : {gen_model}")
     print(f"> Judge Model        : {judge_model}")
     print(f"> Limit              : {'ALL' if limit is None else limit} questions")
-    print("-------------------------------------------------\n")
+    print("-"*60+ "\n")
 
     splits = load_and_split_dataset(dataset_path, limit=limit)
     if not any(splits.values()):
-        print("Dataset is empty. Exiting.")
+        print("Dataset is empty. Stopping.")
         sys.exit(1)
 
     llm_client = LLMClient(config)
@@ -252,10 +253,10 @@ def main():
         print("\nCalibration Complete!")
         print(f"Results saved to: {method_artifacts_dir}")
         print("\n--- Conformal Thresholds ---")
-        print(f"  q_hat (Cutoff) : {scorer.q_hat:.4f}")
-        print(f"  theta_low      : {scorer.theta_low:.4f} (PASS zone)")
-        print(f"  theta_high     : {scorer.theta_high:.4f} (FLAG zone)")
-        print("-------------------------------------------------")
+        print(f"q_hat (Cutoff): {scorer.q_hat:.4f}")
+        print(f"theta_low: {scorer.theta_low:.4f} (PASS zone)")
+        print(f"theta_high: {scorer.theta_high:.4f} (FLAG zone)")
+        print("_"*60)
 
         with open(os.path.join(method_artifacts_dir, 'calibration_results.json')) as _f:
             _cal = json.load(_f)
@@ -263,20 +264,20 @@ def main():
         _correct_mean = _sep.get('correct_mean', 0.0)
         _wrong_mean = _sep.get('wrong_mean')
 
-        print("\n--- Signal Validation ---")
+        print("\n Validation ")
+        print("_"*60)
         if _wrong_mean is None:
-            print("  [WARN] No wrong examples in calibration set.")
+            print("[WARN] No wrong examples in calibration set.")
         elif _wrong_mean <= _correct_mean:
-            print(f"  [WARN] wrong_mean ({_wrong_mean:.4f}) <= correct_mean ({_correct_mean:.4f})")
-            print("         Scorer has no predictive separation.")
+            print(f"[WARN] wrong_mean ({_wrong_mean:.4f}) <= correct_mean ({_correct_mean:.4f})")
+            print("Scorer has no predictive separation.")
         else:
-            print(f"  [OK]   wrong_mean ({_wrong_mean:.4f}) > correct_mean ({_correct_mean:.4f})")
-            print("         Scorer has predictive signal.")
-        print("-------------------------------------------------")
+            print(f"[OK] wrong_mean ({_wrong_mean:.4f}) > correct_mean ({_correct_mean:.4f})")
+            print("Scorer has predictive signal.")
 
         if splits['evaluation']:
             eval_processed = process_split(splits['evaluation'], llm_client, "Evaluation")
-            print("\n--- Out-of-Sample Evaluation ---")
+            print("\nOut-of-Sample Evaluation")
 
             eval_records = []
             pass_count = 0
@@ -317,14 +318,14 @@ def main():
             pass_rate = (pass_count / total_eval) * 100 if total_eval > 0 else 0
             pass_error_rate = (pass_wrong_count / pass_count) * 100 if pass_count > 0 else 0
 
-            print(f"  Total Samples   : {total_eval}")
-            print(f"  PASS Decisions  : {pass_count} ({pass_rate:.1f}%)")
-            print(f"  REVIEW Decisions: {review_count} ({(review_count / total_eval) * 100:.1f}%)")
-            print(f"  FLAG Decisions  : {flag_count} ({(flag_count / total_eval) * 100:.1f}%)")
-            print(f"  PASS Error Rate : {pass_error_rate:.1f}% (target: <= 10.0%)")
+            print(f"Total Samples : {total_eval}")
+            print(f"PASS Decisions  : {pass_count} ({pass_rate:.1f}%)")
+            print(f"REVIEW Decisions: {review_count} ({(review_count / total_eval) * 100:.1f}%)")
+            print(f"FLAG Decisions  : {flag_count} ({(flag_count / total_eval) * 100:.1f}%)")
+            print(f"PASS Error Rate : {pass_error_rate:.1f}% (target: <= 10.0%)")
 
             from datetime import datetime
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            timestamp = datetime.now()
             eval_results = {
                 "method": method,
                 "timestamp": timestamp,
@@ -344,7 +345,6 @@ def main():
                 json.dump(eval_results, f, indent=4)
 
             print(f"\nEvaluation saved to: {eval_dir}")
-            print("-------------------------------------------------\n")
 
     except Exception as e:
         print(f"\n[ERROR] Process failed: {e}")

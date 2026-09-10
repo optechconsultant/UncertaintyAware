@@ -13,6 +13,7 @@ class LLMClient:
         self.embedding_model = config['embedding']['embedding_model']
         self.judge_model = config['judge']['judge_model']
         self.judge_temp = config['judge']['temperature']
+        
     def generate_output_and_samples(self, prompt: str) -> Tuple[str, List[str]]:
         samples = []
         for _ in range(self.num_samples):
@@ -75,7 +76,6 @@ class LLMClient:
             sample_embeddings = self.get_embeddings_batch(samples)
             similarity_matrix = self.compute_cosine_similarity_matrix(sample_embeddings)
 
-            # Select consensus output as the medoid (highest average similarity)
             if similarity_matrix is not None and len(samples) > 0:
                 avg_similarities = similarity_matrix.mean(axis=1)
                 medoid_idx = int(np.argmax(avg_similarities))
