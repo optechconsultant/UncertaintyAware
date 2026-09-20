@@ -51,6 +51,7 @@ def Calculate_OOD(cosineDistance,OODThreshold):
 query=input("")
 OOD_Threshold=float(input())
 OOD_Centroid=list(map(float,input("").split(",")))
+global OOD_result
 
 query_chunks=generate_chunks(query,5)
 # print(query_chunks)
