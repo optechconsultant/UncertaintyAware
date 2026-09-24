@@ -1,4 +1,4 @@
-def hardThresholdPolicy(nonConfirmityScore,nonConfirmityThreshold,domainCondition):
+def hardThresholdPolicy(nonConfirmityScore,nonConfirmityThreshold):
         if nonConfirmityScore<nonConfirmityThreshold:
             return 'PASS'
         else:
