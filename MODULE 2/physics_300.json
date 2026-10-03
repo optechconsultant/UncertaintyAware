@@ -1,0 +1,2892 @@
+[
+  {
+    "question": "What is the moment of inertia of a thin spherical shell of mass M and radius R about a diameter?",
+    "best_answer": "2MR\u00b2/3",
+    "correct_answers": [
+      "2MR\u00b2/3",
+      "2/3 MR\u00b2",
+      "(2/3)MR\u00b2"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is mean free path?",
+    "best_answer": "Average distance a particle travels between successive collisions",
+    "correct_answers": [
+      "average distance between collisions"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the magnetic dipole moment of a current loop?",
+    "best_answer": "\u03bc = IA",
+    "correct_answers": [
+      "\u03bc = IA",
+      "current times area"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the law of conservation of momentum?",
+    "best_answer": "The total momentum of an isolated system remains constant",
+    "correct_answers": [
+      "total momentum is conserved"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the refractive index using permittivity and permeability?",
+    "best_answer": "n = \u221a(\u03b5_r \u03bc_r)",
+    "correct_answers": [
+      "sqrt(\u03b5_r \u03bc_r)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Euler-Lagrange equation?",
+    "best_answer": "d/dt(\u2202L/\u2202q\u0307) \u2212 \u2202L/\u2202q = 0",
+    "correct_answers": [
+      "d/dt(\u2202L/\u2202q\u0307) - \u2202L/\u2202q = 0"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the wavelength of the 21 cm hydrogen line used in radio astronomy?",
+    "best_answer": "21.106 cm",
+    "correct_answers": [
+      "21.106 cm",
+      "21 cm",
+      "approximately 21 centimetres"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Ampere's law?",
+    "best_answer": "\u222eB\u00b7dl = \u03bc\u2080I \u2014 line integral of B around closed loop equals \u03bc\u2080 times enclosed current",
+    "correct_answers": [
+      "\u222eB\u00b7dl = \u03bc\u2080I"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Pauli exclusion principle?",
+    "best_answer": "No two fermions can occupy the same quantum state simultaneously",
+    "correct_answers": [
+      "no two electrons in same quantum state"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for heat capacity of an ideal monatomic gas at constant volume?",
+    "best_answer": "Cv = (3/2)nR",
+    "correct_answers": [
+      "3nR/2",
+      "(3/2)nR"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Ohm's law?",
+    "best_answer": "V = IR",
+    "correct_answers": [
+      "V = IR",
+      "voltage equals current times resistance"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is an isotope?",
+    "best_answer": "Atoms of same element with same protons but different neutrons",
+    "correct_answers": [
+      "same element, different neutrons"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Huygens' principle?",
+    "best_answer": "Every point on a wavefront acts as source of secondary spherical wavelets",
+    "correct_answers": [
+      "each point on wavefront is source of secondary wavelets"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Bohr radius in metres?",
+    "best_answer": "5.29 \u00d7 10\u207b\u00b9\u00b9 m",
+    "correct_answers": [
+      "5.29 \u00d7 10\u207b\u00b9\u00b9 m",
+      "0.529 \u00c5",
+      "0.529 angstroms"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Newton's second law of motion?",
+    "best_answer": "F = ma",
+    "correct_answers": [
+      "F = ma",
+      "force equals mass times acceleration"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the group velocity for light in a dispersive medium with refractive index n(\u03c9)?",
+    "best_answer": "v_g = c/(n + \u03c9\u00b7dn/d\u03c9)",
+    "correct_answers": [
+      "c/(n + \u03c9 dn/d\u03c9)",
+      "c over n plus omega times dn/domega"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the refractive index using permittivity and permeability?",
+    "best_answer": "n = \u221a(\u03b5_r \u03bc_r)",
+    "correct_answers": [
+      "sqrt(\u03b5_r \u03bc_r)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the energy density of a magnetic field?",
+    "best_answer": "u = B\u00b2/2\u03bc\u2080",
+    "correct_answers": [
+      "B\u00b2/2\u03bc\u2080"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the RMS speed of nitrogen molecules (N\u2082, molar mass 28 g/mol) at 300 K?",
+    "best_answer": "Approximately 515 m/s",
+    "correct_answers": [
+      "515 m/s",
+      "approximately 515 m/s",
+      "about 516 m/s"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the RMS speed of gas molecules?",
+    "best_answer": "v_rms = \u221a(3k_BT/m)",
+    "correct_answers": [
+      "sqrt(3kT/m)",
+      "sqrt(3RT/M)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a capacitor store?",
+    "best_answer": "Electrical energy in an electric field between its plates",
+    "correct_answers": [
+      "electrical energy"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Biot-Savart law?",
+    "best_answer": "dB = (\u03bc\u2080/4\u03c0)(Idl \u00d7 r\u0302/r\u00b2)",
+    "correct_answers": [
+      "dB = \u03bc\u2080I dl sin\u03b8 / 4\u03c0r\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does E = mc\u00b2 express?",
+    "best_answer": "Mass and energy equivalence",
+    "correct_answers": [
+      "mass-energy equivalence",
+      "energy equals mass times c squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the phase velocity of a wave?",
+    "best_answer": "v_p = \u03c9/k",
+    "correct_answers": [
+      "\u03c9/k",
+      "omega over k"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the expectation value of position \u27e8x\u27e9 for the ground state of a quantum harmonic oscillator?",
+    "best_answer": "Zero \u2014 the wavefunction is symmetric",
+    "correct_answers": [
+      "zero",
+      "0",
+      "\u27e8x\u27e9 = 0"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the thermodynamic identity?",
+    "best_answer": "dU = TdS \u2212 PdV",
+    "correct_answers": [
+      "TdS - PdV"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is time dilation for a clock moving at 0.6c relative to a stationary observer?",
+    "best_answer": "The moving clock runs at 0.8 times the rate of the stationary clock (\u03b3 = 1.25)",
+    "correct_answers": [
+      "0.8 times",
+      "\u03b3 = 1.25",
+      "factor of 1.25 slower"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for velocity of a wave on a string?",
+    "best_answer": "v = \u221a(T/\u03bc)",
+    "correct_answers": [
+      "sqrt(T/\u03bc)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the energy stored in an inductor?",
+    "best_answer": "E = \u00bdLI\u00b2",
+    "correct_answers": [
+      "\u00bdLI\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for angular momentum?",
+    "best_answer": "L = I\u03c9",
+    "correct_answers": [
+      "L = I\u03c9",
+      "r cross p"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Newton's third law?",
+    "best_answer": "For every action there is an equal and opposite reaction",
+    "correct_answers": [
+      "equal and opposite reaction"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Hall coefficient R_H in terms of charge carrier density n and charge q?",
+    "best_answer": "R_H = 1/nq",
+    "correct_answers": [
+      "1/nq",
+      "1 over nq"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Snell's law?",
+    "best_answer": "n\u2081sin\u03b8\u2081 = n\u2082sin\u03b8\u2082",
+    "correct_answers": [
+      "n1 sin \u03b81 = n2 sin \u03b82"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the moment of inertia of a disc about its axis?",
+    "best_answer": "I = \u00bdMR\u00b2",
+    "correct_answers": [
+      "MR\u00b2/2",
+      "\u00bdMR\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Bose-Einstein distribution?",
+    "best_answer": "f(E) = 1/(exp((E\u2212\u03bc)/k_BT) \u2212 1)",
+    "correct_answers": [
+      "1/(e^((E-\u03bc)/kT) - 1)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the nuclear magneton in J/T?",
+    "best_answer": "5.051 \u00d7 10\u207b\u00b2\u2077 J/T",
+    "correct_answers": [
+      "5.051 \u00d7 10\u207b\u00b2\u2077 J/T",
+      "5.05 \u00d7 10\u207b\u00b2\u2077"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for centripetal acceleration?",
+    "best_answer": "a = v\u00b2/r",
+    "correct_answers": [
+      "v\u00b2/r",
+      "a = v\u00b2/r"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is terminal velocity?",
+    "best_answer": "The constant speed reached when drag force equals gravitational force",
+    "correct_answers": [
+      "constant velocity when drag equals gravity"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the magnetic mirror effect in plasma confinement?",
+    "best_answer": "Charged particles are reflected back when they move from a region of weak magnetic field into a region of stronger magnetic field, conserving the magnetic moment",
+    "correct_answers": [
+      "particles reflect from strong field regions",
+      "conservation of magnetic moment causes reflection"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the magnetic field at the centre of a circular loop?",
+    "best_answer": "B = \u03bc\u2080I/2R",
+    "correct_answers": [
+      "\u03bc\u2080I/2R"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Brewster angle for light hitting glass with refractive index n = 1.5?",
+    "best_answer": "Approximately 56.3 degrees",
+    "correct_answers": [
+      "56.3 degrees",
+      "approximately 56\u00b0",
+      "arctan(1.5) \u2248 56.3\u00b0"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the spin magnetic quantum number for an electron?",
+    "best_answer": "+\u00bd or \u2212\u00bd",
+    "correct_answers": [
+      "+1/2 or -1/2",
+      "\u00b1\u00bd"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does E = mc\u00b2 mean?",
+    "best_answer": "Mass and energy are equivalent; energy equals mass times c squared",
+    "correct_answers": [
+      "mass-energy equivalence"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the unit of capacitance?",
+    "best_answer": "Farad (F)",
+    "correct_answers": [
+      "Farad",
+      "F"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the law of conservation of momentum?",
+    "best_answer": "The total momentum of an isolated system remains constant",
+    "correct_answers": [
+      "total momentum is conserved"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the acceleration due to gravity on Earth's surface?",
+    "best_answer": "9.8 m/s\u00b2",
+    "correct_answers": [
+      "9.8 m/s\u00b2",
+      "9.81 m/s\u00b2",
+      "approximately 10 m/s\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the energy density of a magnetic field?",
+    "best_answer": "u = B\u00b2/2\u03bc\u2080",
+    "correct_answers": [
+      "B\u00b2/2\u03bc\u2080"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the escape velocity from Earth?",
+    "best_answer": "Approximately 11.2 km/s",
+    "correct_answers": [
+      "11.2 km/s"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the impedance of an inductor?",
+    "best_answer": "Z_L = j\u03c9L",
+    "correct_answers": [
+      "j\u03c9L",
+      "X_L = \u03c9L"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relativistic kinetic energy?",
+    "best_answer": "KE = (\u03b3\u22121)mc\u00b2",
+    "correct_answers": [
+      "(\u03b3-1)mc\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the continuity equation in fluid mechanics?",
+    "best_answer": "A\u2081v\u2081 = A\u2082v\u2082",
+    "correct_answers": [
+      "A1v1 = A2v2",
+      "\u03c1A\u2081v\u2081 = \u03c1A\u2082v\u2082"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Newton's third law?",
+    "best_answer": "For every action there is an equal and opposite reaction",
+    "correct_answers": [
+      "equal and opposite reaction"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "In which medium does sound travel fastest?",
+    "best_answer": "Solid",
+    "correct_answers": [
+      "solid",
+      "solids"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Doppler shift in frequency when a source moves towards a stationary observer at speed v_s in a medium where sound travels at speed c?",
+    "best_answer": "f' = f\u00b7c/(c - v_s)",
+    "correct_answers": [
+      "f' = fc/(c-vs)",
+      "f times c divided by c minus vs"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the number density of states in 3D?",
+    "best_answer": "g(E) \u221d \u221aE",
+    "correct_answers": [
+      "proportional to square root of E"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for angular momentum?",
+    "best_answer": "L = I\u03c9",
+    "correct_answers": [
+      "L = I\u03c9",
+      "r cross p"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the radiation pressure of an EM wave?",
+    "best_answer": "P = I/c (absorbed) or P = 2I/c (reflected)",
+    "correct_answers": [
+      "I/c",
+      "radiation pressure"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the principle of superposition for waves?",
+    "best_answer": "The resultant displacement is the algebraic sum of individual displacements",
+    "correct_answers": [
+      "displacements add algebraically"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the escape velocity from the surface of Mars in km/s?",
+    "best_answer": "5.03 km/s",
+    "correct_answers": [
+      "5.03",
+      "approximately 5 km/s",
+      "5.03 km/s"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the tunnelling probability for a particle of energy E through a rectangular barrier of height V\u2080 > E and width L?",
+    "best_answer": "T \u2248 e^(-2\u03baL) where \u03ba = \u221a(2m(V\u2080-E))/\u210f",
+    "correct_answers": [
+      "e^(-2\u03baL)",
+      "exponential of -2 kappa L",
+      "T \u2248 exp(-2\u03baL)"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the angular momentum of Earth's revolution around the Sun in kg\u00b7m\u00b2/s?",
+    "best_answer": "Approximately 2.66 \u00d7 10\u2074\u2074 kg\u00b7m\u00b2/s",
+    "correct_answers": [
+      "2.66 \u00d7 10\u2074\u2074",
+      "approximately 2.7 \u00d7 10\u2074\u2074 kg m\u00b2 s\u207b\u00b9"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the Fermi-Dirac distribution?",
+    "best_answer": "f(E) = 1/(exp((E\u2212E_F)/k_BT) + 1)",
+    "correct_answers": [
+      "1/(e^((E-EF)/kT) + 1)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the plasma frequency \u03c9_p for electron plasma?",
+    "best_answer": "\u03c9_p = \u221a(ne\u00b2/\u03b5\u2080m_e)",
+    "correct_answers": [
+      "\u221a(ne\u00b2/\u03b5\u2080m_e)",
+      "root of ne squared over epsilon zero me"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the latent heat of vaporisation of water in J/kg at 100\u00b0C?",
+    "best_answer": "2.26 \u00d7 10\u2076 J/kg",
+    "correct_answers": [
+      "2.26 \u00d7 10\u2076 J/kg",
+      "2260 kJ/kg",
+      "2.26 MJ/kg"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is length contraction in special relativity?",
+    "best_answer": "L = L\u2080/\u03b3",
+    "correct_answers": [
+      "L = L\u2080/\u03b3",
+      "L = L\u2080\u221a(1-v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for gravitational force between two masses?",
+    "best_answer": "F = Gm\u2081m\u2082/r\u00b2",
+    "correct_answers": [
+      "G m1 m2 / r\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Debye temperature?",
+    "best_answer": "\u03b8_D = \u210f\u03c9_D/k_B",
+    "correct_answers": [
+      "hbar omega_D / kB"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the RMS speed of gas molecules?",
+    "best_answer": "v_rms = \u221a(3k_BT/m)",
+    "correct_answers": [
+      "sqrt(3kT/m)",
+      "sqrt(3RT/M)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the speed of light in vacuum?",
+    "best_answer": "3 \u00d7 10\u2078 m/s",
+    "correct_answers": [
+      "3 \u00d7 10\u2078 m/s",
+      "299,792,458 m/s"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Coulomb's law?",
+    "best_answer": "F = kq\u2081q\u2082/r\u00b2",
+    "correct_answers": [
+      "F = kq\u2081q\u2082/r\u00b2",
+      "k q1 q2 over r squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Hall effect?",
+    "best_answer": "Development of a transverse voltage across a current-carrying conductor in a magnetic field",
+    "correct_answers": [
+      "transverse voltage in conductor in magnetic field"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for capacitance of a parallel plate capacitor?",
+    "best_answer": "C = \u03b5\u2080A/d",
+    "correct_answers": [
+      "C = \u03b5\u2080A/d"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the electric flux?",
+    "best_answer": "\u03a6 = \u222bE\u00b7dA = Q_enc/\u03b5\u2080",
+    "correct_answers": [
+      "Q_enclosed / \u03b5\u2080",
+      "E dot A"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Faraday's law state?",
+    "best_answer": "The induced EMF equals the negative rate of change of magnetic flux",
+    "correct_answers": [
+      "EMF equals rate of change of magnetic flux"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the energy stored in a capacitor?",
+    "best_answer": "E = \u00bdCV\u00b2",
+    "correct_answers": [
+      "\u00bdCV\u00b2",
+      "E = \u00bdCV\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Newton's second law of motion?",
+    "best_answer": "F = ma",
+    "correct_answers": [
+      "F = ma",
+      "force equals mass times acceleration"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Rydberg formula for hydrogen?",
+    "best_answer": "1/\u03bb = R_H(1/n\u2081\u00b2 \u2212 1/n\u2082\u00b2)",
+    "correct_answers": [
+      "1/\u03bb = RH(1/n1\u00b2 - 1/n2\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is simple harmonic motion?",
+    "best_answer": "Oscillation where restoring force is proportional to displacement",
+    "correct_answers": [
+      "F = -kx type motion"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the magnetic force on a current-carrying conductor?",
+    "best_answer": "F = BIL sin\u03b8",
+    "correct_answers": [
+      "F = BIL",
+      "BIL sin\u03b8"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the number density of states in 3D?",
+    "best_answer": "g(E) \u221d \u221aE",
+    "correct_answers": [
+      "proportional to square root of E"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the latent heat of vaporisation of water in J/kg at 100\u00b0C?",
+    "best_answer": "2.26 \u00d7 10\u2076 J/kg",
+    "correct_answers": [
+      "2.26 \u00d7 10\u2076 J/kg",
+      "2260 kJ/kg",
+      "2.26 MJ/kg"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the photoelectric effect?",
+    "best_answer": "Emission of electrons from a material when light of sufficient frequency shines on it",
+    "correct_answers": [
+      "electrons emitted when light hits metal"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for electric power?",
+    "best_answer": "P = IV",
+    "correct_answers": [
+      "P = IV",
+      "P = I\u00b2R",
+      "power equals current times voltage"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the number density of states in 3D?",
+    "best_answer": "g(E) \u221d \u221aE",
+    "correct_answers": [
+      "proportional to square root of E"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Archimedes' principle state?",
+    "best_answer": "A body immersed in a fluid experiences an upward buoyant force equal to the weight of fluid displaced",
+    "correct_answers": [
+      "buoyant force equals weight of fluid displaced"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the dispersion relation for an EM wave in vacuum?",
+    "best_answer": "\u03c9 = ck",
+    "correct_answers": [
+      "\u03c9 = ck"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Bohr radius?",
+    "best_answer": "a\u2080 \u2248 0.529 \u00c5",
+    "correct_answers": [
+      "0.529 Angstrom",
+      "0.529 \u00d7 10\u207b\u00b9\u2070 m"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Lagrangian of a simple pendulum of mass m, length L, and angle \u03b8 from vertical?",
+    "best_answer": "L = (1/2)mL\u00b2\u03b8\u0307\u00b2 - mgL(1 - cos\u03b8)",
+    "correct_answers": [
+      "(1/2)mL\u00b2\u03b8\u0307\u00b2 - mgL(1-cos\u03b8)",
+      "kinetic minus potential energy of pendulum"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Lorentz factor \u03b3 for a particle moving at 0.8c?",
+    "best_answer": "5/3 \u2248 1.667",
+    "correct_answers": [
+      "5/3",
+      "1.667",
+      "approximately 1.67"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the mutual inductance?",
+    "best_answer": "M = N\u2082\u03a6\u2082\u2081/I\u2081",
+    "correct_answers": [
+      "N\u2082\u03a6\u2082\u2081/I\u2081"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for pressure?",
+    "best_answer": "P = F/A",
+    "correct_answers": [
+      "P = F/A",
+      "force divided by area"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the zero-point energy of a quantum harmonic oscillator of angular frequency \u03c9?",
+    "best_answer": "E\u2080 = \u210f\u03c9/2",
+    "correct_answers": [
+      "\u210f\u03c9/2",
+      "h-bar omega over 2",
+      "hf/2"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the magnetic field at the centre of a circular loop?",
+    "best_answer": "B = \u03bc\u2080I/2R",
+    "correct_answers": [
+      "\u03bc\u2080I/2R"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Young's modulus?",
+    "best_answer": "Ratio of tensile stress to tensile strain",
+    "correct_answers": [
+      "stress divided by strain"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the moment of inertia of a thin rod about its centre?",
+    "best_answer": "I = ML\u00b2/12",
+    "correct_answers": [
+      "ML\u00b2/12",
+      "1/12 ML\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the main-sequence lifetime of the Sun in years?",
+    "best_answer": "Approximately 10 billion years",
+    "correct_answers": [
+      "10 billion years",
+      "approximately 10\u2079 years",
+      "10 Gyr"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is length contraction in special relativity?",
+    "best_answer": "L = L\u2080/\u03b3",
+    "correct_answers": [
+      "L = L\u2080/\u03b3",
+      "L = L\u2080\u221a(1-v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the three types of radioactive decay?",
+    "best_answer": "Alpha, Beta, and Gamma",
+    "correct_answers": [
+      "alpha, beta, gamma"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for power in rotational motion?",
+    "best_answer": "P = \u03c4\u03c9",
+    "correct_answers": [
+      "P = \u03c4\u03c9",
+      "torque times angular velocity"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the electric field of a conducting sphere outside?",
+    "best_answer": "E = kQ/r\u00b2",
+    "correct_answers": [
+      "kQ/r\u00b2",
+      "Q/4\u03c0\u03b5\u2080r\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for pressure?",
+    "best_answer": "P = F/A",
+    "correct_answers": [
+      "P = F/A",
+      "force divided by area"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for gravitational potential energy near Earth's surface?",
+    "best_answer": "PE = mgh",
+    "correct_answers": [
+      "mgh",
+      "PE = mgh"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Schwarzschild radius?",
+    "best_answer": "r_s = 2GM/c\u00b2",
+    "correct_answers": [
+      "2GM/c\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the moment of inertia of a hollow cylinder?",
+    "best_answer": "I = MR\u00b2",
+    "correct_answers": [
+      "I = MR\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Compton wavelength shift?",
+    "best_answer": "\u0394\u03bb = (h/m\u2091c)(1 \u2212 cos\u03b8)",
+    "correct_answers": [
+      "h over mc times 1 minus cos theta"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the relativistic kinetic energy?",
+    "best_answer": "KE = (\u03b3\u22121)mc\u00b2",
+    "correct_answers": [
+      "(\u03b3-1)mc\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for total energy of a relativistic particle?",
+    "best_answer": "E\u00b2 = (pc)\u00b2 + (mc\u00b2)\u00b2",
+    "correct_answers": [
+      "E\u00b2 = (pc)\u00b2 + (mc\u00b2)\u00b2",
+      "\u03b3mc\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a standing wave?",
+    "best_answer": "A wave formed by superposition of two identical waves traveling in opposite directions",
+    "correct_answers": [
+      "superposition of two waves in opposite directions"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for heat conduction?",
+    "best_answer": "Q/t = kA(\u0394T/\u0394x)",
+    "correct_answers": [
+      "kA dT/dx"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the escape velocity from Earth?",
+    "best_answer": "Approximately 11.2 km/s",
+    "correct_answers": [
+      "11.2 km/s"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for electric potential due to a point charge?",
+    "best_answer": "V = kq/r",
+    "correct_answers": [
+      "V = kq/r"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the continuity equation in fluid mechanics?",
+    "best_answer": "A\u2081v\u2081 = A\u2082v\u2082",
+    "correct_answers": [
+      "A1v1 = A2v2",
+      "\u03c1A\u2081v\u2081 = \u03c1A\u2082v\u2082"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the radiation resistance of a short electric dipole antenna of length dl at wavelength \u03bb?",
+    "best_answer": "R_rad = 80\u03c0\u00b2(dl/\u03bb)\u00b2",
+    "correct_answers": [
+      "80\u03c0\u00b2(dl/\u03bb)\u00b2",
+      "80 pi squared times (dl/lambda) squared"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the critical angle in optics?",
+    "best_answer": "The angle of incidence above which total internal reflection occurs",
+    "correct_answers": [
+      "angle beyond which TIR occurs"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the speed of light in vacuum?",
+    "best_answer": "3 \u00d7 10\u2078 m/s",
+    "correct_answers": [
+      "3 \u00d7 10\u2078 m/s",
+      "299,792,458 m/s"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the impedance of an RLC series circuit?",
+    "best_answer": "Z = \u221a(R\u00b2 + (\u03c9L \u2212 1/\u03c9C)\u00b2)",
+    "correct_answers": [
+      "sqrt(R\u00b2 + (\u03c9L - 1/\u03c9C)\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does a capacitor store?",
+    "best_answer": "Electrical energy in an electric field between its plates",
+    "correct_answers": [
+      "electrical energy"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Bragg condition?",
+    "best_answer": "2d sin\u03b8 = n\u03bb",
+    "correct_answers": [
+      "2d sin\u03b8 = n\u03bb"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Lorentz transformation for time?",
+    "best_answer": "t' = \u03b3(t \u2212 vx/c\u00b2)",
+    "correct_answers": [
+      "\u03b3(t - vx/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Planck length?",
+    "best_answer": "l_P = \u221a(\u210fG/c\u00b3) \u2248 1.616 \u00d7 10\u207b\u00b3\u2075 m",
+    "correct_answers": [
+      "sqrt(\u210fG/c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the energy density of an electric field?",
+    "best_answer": "u = \u00bd\u03b5\u2080E\u00b2",
+    "correct_answers": [
+      "\u00bd\u03b5\u2080E\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the fine structure constant \u03b1 to 4 significant figures?",
+    "best_answer": "1/137.0 \u2248 7.297 \u00d7 10\u207b\u00b3",
+    "correct_answers": [
+      "1/137",
+      "7.297 \u00d7 10\u207b\u00b3",
+      "approximately 1/137"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Ohm's law?",
+    "best_answer": "V = IR",
+    "correct_answers": [
+      "V = IR",
+      "voltage equals current times resistance"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for entropy using microstates?",
+    "best_answer": "S = k_B ln \u03a9",
+    "correct_answers": [
+      "S = kB ln \u03a9",
+      "k ln W"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What type of wave is sound?",
+    "best_answer": "Longitudinal wave",
+    "correct_answers": [
+      "longitudinal wave",
+      "compression wave"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the magnetic moment of an electron in Bohr magnetons?",
+    "best_answer": "Approximately 1.00116 Bohr magnetons (g-factor \u2248 2.002)",
+    "correct_answers": [
+      "1.00116 Bohr magnetons",
+      "approximately 1 Bohr magneton",
+      "g-factor approximately 2"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Wigner-Seitz cell?",
+    "best_answer": "Primitive unit cell of a Bravais lattice formed by bisecting lines to nearest neighbours",
+    "correct_answers": [
+      "Voronoi cell of lattice"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the maximum kinetic energy in photoelectric effect?",
+    "best_answer": "KE_max = hf \u2212 \u03c6",
+    "correct_answers": [
+      "hf - \u03c6",
+      "h times f minus work function"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "In which medium does sound travel fastest?",
+    "best_answer": "Solid",
+    "correct_answers": [
+      "solid",
+      "solids"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for elastic potential energy stored in a spring?",
+    "best_answer": "PE = \u00bdkx\u00b2",
+    "correct_answers": [
+      "\u00bdkx\u00b2",
+      "half k x squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is a conservative force?",
+    "best_answer": "A force for which work done is independent of path",
+    "correct_answers": [
+      "path-independent force"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the magnetic susceptibility of a diamagnetic material?",
+    "best_answer": "Small and negative (\u03c7 < 0)",
+    "correct_answers": [
+      "small and negative",
+      "negative susceptibility",
+      "\u03c7 < 0"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the energy stored in a capacitor?",
+    "best_answer": "E = \u00bdCV\u00b2",
+    "correct_answers": [
+      "\u00bdCV\u00b2",
+      "E = \u00bdCV\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the latent heat of vaporisation of water in J/kg at 100\u00b0C?",
+    "best_answer": "2.26 \u00d7 10\u2076 J/kg",
+    "correct_answers": [
+      "2.26 \u00d7 10\u2076 J/kg",
+      "2260 kJ/kg",
+      "2.26 MJ/kg"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is Huygens' principle?",
+    "best_answer": "Every point on a wavefront acts as source of secondary spherical wavelets",
+    "correct_answers": [
+      "each point on wavefront is source of secondary wavelets"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the cutoff frequency of a rectangular waveguide for the TE\u2081\u2080 mode, with width a?",
+    "best_answer": "f_c = c/2a",
+    "correct_answers": [
+      "c/2a",
+      "speed of light divided by 2a"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the polarisation P of a dielectric in terms of permittivity and electric field?",
+    "best_answer": "P = \u03b5\u2080\u03c7_e E, where \u03c7_e is the electric susceptibility",
+    "correct_answers": [
+      "\u03b5\u2080\u03c7E",
+      "epsilon zero times chi times E",
+      "P = \u03b5\u2080\u03c7_e E"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is specific heat capacity?",
+    "best_answer": "Heat energy per unit mass per degree temperature rise",
+    "correct_answers": [
+      "heat per unit mass per degree"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is length contraction in special relativity?",
+    "best_answer": "L = L\u2080/\u03b3",
+    "correct_answers": [
+      "L = L\u2080/\u03b3",
+      "L = L\u2080\u221a(1-v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is simple harmonic motion?",
+    "best_answer": "Oscillation where restoring force is proportional to displacement",
+    "correct_answers": [
+      "F = -kx type motion"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is nuclear fission?",
+    "best_answer": "The splitting of a heavy nucleus into lighter nuclei, releasing energy",
+    "correct_answers": [
+      "splitting of heavy nucleus into smaller parts"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the thermodynamic identity?",
+    "best_answer": "dU = TdS \u2212 PdV",
+    "correct_answers": [
+      "TdS - PdV"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the drift velocity in Ohm's law?",
+    "best_answer": "v_d = J/(ne)",
+    "correct_answers": [
+      "J/ne",
+      "I/nAe"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for electrical resistance in terms of resistivity?",
+    "best_answer": "R = \u03c1L/A",
+    "correct_answers": [
+      "R = \u03c1L/A"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is nuclear fusion?",
+    "best_answer": "Combining of light nuclei to form a heavier nucleus, releasing energy",
+    "correct_answers": [
+      "light nuclei combining to release energy"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does Archimedes' principle state?",
+    "best_answer": "A body immersed in a fluid experiences an upward buoyant force equal to the weight of fluid displaced",
+    "correct_answers": [
+      "buoyant force equals weight of fluid displaced"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Stefan-Boltzmann law?",
+    "best_answer": "Power radiated per unit area is proportional to T\u2074: P/A = \u03c3T\u2074",
+    "correct_answers": [
+      "P = \u03c3T\u2074"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the unit of capacitance?",
+    "best_answer": "Farad (F)",
+    "correct_answers": [
+      "Farad",
+      "F"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for entropy change in isothermal expansion?",
+    "best_answer": "\u0394S = nR ln(V\u2082/V\u2081)",
+    "correct_answers": [
+      "nR ln(V2/V1)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the beat frequency when two tuning forks of 440 Hz and 444 Hz are sounded together?",
+    "best_answer": "4 Hz",
+    "correct_answers": [
+      "4 Hz",
+      "4 beats per second"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Stefan-Boltzmann law?",
+    "best_answer": "Power radiated per unit area is proportional to T\u2074: P/A = \u03c3T\u2074",
+    "correct_answers": [
+      "P = \u03c3T\u2074"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Schwarzschild radius?",
+    "best_answer": "r_s = 2GM/c\u00b2",
+    "correct_answers": [
+      "2GM/c\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Coulomb's law?",
+    "best_answer": "F = kq\u2081q\u2082/r\u00b2",
+    "correct_answers": [
+      "F = kq\u2081q\u2082/r\u00b2",
+      "k q1 q2 over r squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the velocity selector condition?",
+    "best_answer": "E = vB (electric force equals magnetic force)",
+    "correct_answers": [
+      "E = vB",
+      "qE = qvB"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the phase velocity of a wave with dispersion relation \u03c9 = ck\u00b2?",
+    "best_answer": "v_p = \u03c9/k = ck",
+    "correct_answers": [
+      "ck",
+      "\u03c9/k = ck",
+      "phase velocity equals ck"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is total internal reflection?",
+    "best_answer": "When light hits the boundary at an angle greater than the critical angle from dense to less dense medium, it is completely reflected",
+    "correct_answers": [
+      "complete reflection when angle exceeds critical angle"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Chandrasekhar limit for white dwarf stars?",
+    "best_answer": "Approximately 1.4 solar masses",
+    "correct_answers": [
+      "1.4 solar masses",
+      "approximately 1.4 M_sun"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the electric potential due to a dipole?",
+    "best_answer": "V = kp cos\u03b8/r\u00b2",
+    "correct_answers": [
+      "kp cos\u03b8/r\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a standing wave?",
+    "best_answer": "A wave formed by superposition of two identical waves traveling in opposite directions",
+    "correct_answers": [
+      "superposition of two waves in opposite directions"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the self-inductance of a solenoid?",
+    "best_answer": "L = \u03bc\u2080n\u00b2Al",
+    "correct_answers": [
+      "\u03bc\u2080n\u00b2Al",
+      "mu zero n squared times volume"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the magnetic force on a charged particle (Lorentz)?",
+    "best_answer": "F = qv \u00d7 B",
+    "correct_answers": [
+      "F = qvB sin\u03b8"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for entropy change in isothermal expansion?",
+    "best_answer": "\u0394S = nR ln(V\u2082/V\u2081)",
+    "correct_answers": [
+      "nR ln(V2/V1)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is time dilation for a clock moving at 0.6c relative to a stationary observer?",
+    "best_answer": "The moving clock runs at 0.8 times the rate of the stationary clock (\u03b3 = 1.25)",
+    "correct_answers": [
+      "0.8 times",
+      "\u03b3 = 1.25",
+      "factor of 1.25 slower"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the difference between longitudinal and transverse waves?",
+    "best_answer": "Longitudinal: oscillation parallel to propagation; transverse: perpendicular",
+    "correct_answers": [
+      "longitudinal parallel, transverse perpendicular"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for electric power?",
+    "best_answer": "P = IV",
+    "correct_answers": [
+      "P = IV",
+      "P = I\u00b2R",
+      "power equals current times voltage"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the half-life of Carbon-14 in years?",
+    "best_answer": "5730 years",
+    "correct_answers": [
+      "5730 years",
+      "approximately 5730 years",
+      "5730 yr"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the binding energy of a nucleus?",
+    "best_answer": "Energy required to completely separate the nucleus into protons and neutrons",
+    "correct_answers": [
+      "energy to separate nucleus into nucleons"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Stefan-Boltzmann constant in W\u00b7m\u207b\u00b2\u00b7K\u207b\u2074?",
+    "best_answer": "5.67 \u00d7 10\u207b\u2078 W\u00b7m\u207b\u00b2\u00b7K\u207b\u2074",
+    "correct_answers": [
+      "5.67 \u00d7 10\u207b\u2078",
+      "5.670 \u00d7 10\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Rayleigh criterion?",
+    "best_answer": "Two sources are just resolved when central max of one falls on first minimum of other: \u03b8 \u2248 1.22\u03bb/D",
+    "correct_answers": [
+      "\u03b8 \u2248 1.22\u03bb/D"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for angular velocity in terms of period?",
+    "best_answer": "\u03c9 = 2\u03c0/T",
+    "correct_answers": [
+      "\u03c9 = 2\u03c0/T"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a capacitor store?",
+    "best_answer": "Electrical energy in an electric field between its plates",
+    "correct_answers": [
+      "electrical energy"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does E = mc\u00b2 mean?",
+    "best_answer": "Mass and energy are equivalent; energy equals mass times c squared",
+    "correct_answers": [
+      "mass-energy equivalence"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Meissner effect in superconductors?",
+    "best_answer": "The complete expulsion of magnetic flux from the interior of a superconductor when it transitions below the critical temperature",
+    "correct_answers": [
+      "complete expulsion of magnetic flux",
+      "perfect diamagnetism below critical temperature"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the ratio of the proton mass to the electron mass?",
+    "best_answer": "Approximately 1836",
+    "correct_answers": [
+      "1836",
+      "approximately 1836",
+      "proton is 1836 times heavier"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is work done by a constant force?",
+    "best_answer": "W = F\u00b7d\u00b7cos\u03b8",
+    "correct_answers": [
+      "W = Fd cos\u03b8"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the binding energy of a nucleus?",
+    "best_answer": "Energy required to completely separate the nucleus into protons and neutrons",
+    "correct_answers": [
+      "energy to separate nucleus into nucleons"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Hall effect?",
+    "best_answer": "Development of a transverse voltage across a current-carrying conductor in a magnetic field",
+    "correct_answers": [
+      "transverse voltage in conductor in magnetic field"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the tunnelling probability for a particle of energy E through a rectangular barrier of height V\u2080 > E and width L?",
+    "best_answer": "T \u2248 e^(-2\u03baL) where \u03ba = \u221a(2m(V\u2080-E))/\u210f",
+    "correct_answers": [
+      "e^(-2\u03baL)",
+      "exponential of -2 kappa L",
+      "T \u2248 exp(-2\u03baL)"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the Bose-Einstein distribution?",
+    "best_answer": "f(E) = 1/(exp((E\u2212\u03bc)/k_BT) \u2212 1)",
+    "correct_answers": [
+      "1/(e^((E-\u03bc)/kT) - 1)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the critical temperature of superconducting mercury (Hg)?",
+    "best_answer": "4.15 K",
+    "correct_answers": [
+      "4.15 K",
+      "approximately 4.2 K",
+      "4.15 Kelvin"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for angular velocity in terms of period?",
+    "best_answer": "\u03c9 = 2\u03c0/T",
+    "correct_answers": [
+      "\u03c9 = 2\u03c0/T"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for gravitational potential energy near Earth's surface?",
+    "best_answer": "PE = mgh",
+    "correct_answers": [
+      "mgh",
+      "PE = mgh"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What conservation law forbids the decay of a proton into a positron and a photon in the Standard Model?",
+    "best_answer": "Conservation of baryon number",
+    "correct_answers": [
+      "baryon number conservation",
+      "conservation of baryon number"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the Debye temperature?",
+    "best_answer": "\u03b8_D = \u210f\u03c9_D/k_B",
+    "correct_answers": [
+      "hbar omega_D / kB"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the thermal de Broglie wavelength?",
+    "best_answer": "\u03bb_th = h/\u221a(2\u03c0mk_BT)",
+    "correct_answers": [
+      "h/sqrt(2\u03c0mkT)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the kinetic theory pressure of an ideal gas?",
+    "best_answer": "P = nk_BT",
+    "correct_answers": [
+      "nkBT",
+      "1/3 rho v_rms squared"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Bohr radius in metres?",
+    "best_answer": "5.29 \u00d7 10\u207b\u00b9\u00b9 m",
+    "correct_answers": [
+      "5.29 \u00d7 10\u207b\u00b9\u00b9 m",
+      "0.529 \u00c5",
+      "0.529 angstroms"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the binding energy per nucleon of iron-56, which has the highest stability of any nucleus?",
+    "best_answer": "Approximately 8.79 MeV per nucleon",
+    "correct_answers": [
+      "8.79 MeV per nucleon",
+      "approximately 8.8 MeV per nucleon"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is a conservative force?",
+    "best_answer": "A force for which work done is independent of path",
+    "correct_answers": [
+      "path-independent force"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the relativistic Lorentz factor?",
+    "best_answer": "\u03b3 = 1/\u221a(1 \u2212 v\u00b2/c\u00b2)",
+    "correct_answers": [
+      "1/sqrt(1 - v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Jeans length \u2014 the critical length scale above which a gas cloud will collapse under gravity?",
+    "best_answer": "The Jeans length is proportional to the square root of temperature divided by density",
+    "correct_answers": [
+      "proportional to square root of temperature over density",
+      "sqrt(kT/G\u03c1m)"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for velocity of a wave on a string?",
+    "best_answer": "v = \u221a(T/\u03bc)",
+    "correct_answers": [
+      "sqrt(T/\u03bc)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Schwarzschild radius of an object with the mass of the Earth?",
+    "best_answer": "Approximately 8.87 mm",
+    "correct_answers": [
+      "8.87 mm",
+      "approximately 9 mm",
+      "about 8.87 millimetres"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is electric field strength?",
+    "best_answer": "Force per unit positive charge: E = F/q",
+    "correct_answers": [
+      "E = F/q",
+      "force per unit charge"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the relativistic addition of velocities?",
+    "best_answer": "u' = (u + v)/(1 + uv/c\u00b2)",
+    "correct_answers": [
+      "(u + v)/(1 + uv/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Mach number?",
+    "best_answer": "M = v/v_s",
+    "correct_answers": [
+      "v/vs",
+      "velocity divided by speed of sound"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is specific heat capacity?",
+    "best_answer": "Heat energy per unit mass per degree temperature rise",
+    "correct_answers": [
+      "heat per unit mass per degree"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Planck length?",
+    "best_answer": "l_P = \u221a(\u210fG/c\u00b3) \u2248 1.616 \u00d7 10\u207b\u00b3\u2075 m",
+    "correct_answers": [
+      "sqrt(\u210fG/c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for gravitational force between two masses?",
+    "best_answer": "F = Gm\u2081m\u2082/r\u00b2",
+    "correct_answers": [
+      "G m1 m2 / r\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of wave is sound?",
+    "best_answer": "Longitudinal wave",
+    "correct_answers": [
+      "longitudinal wave",
+      "compression wave"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for torque?",
+    "best_answer": "\u03c4 = r \u00d7 F",
+    "correct_answers": [
+      "\u03c4 = rF sin\u03b8",
+      "r cross F"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the classical electron radius?",
+    "best_answer": "2.82 \u00d7 10\u207b\u00b9\u2075 m",
+    "correct_answers": [
+      "2.82 \u00d7 10\u207b\u00b9\u2075 m",
+      "2.82 fm",
+      "approximately 2.8 \u00d7 10\u207b\u00b9\u2075 m"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the thermal de Broglie wavelength?",
+    "best_answer": "\u03bb_th = h/\u221a(2\u03c0mk_BT)",
+    "correct_answers": [
+      "h/sqrt(2\u03c0mkT)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Bohr model?",
+    "best_answer": "Electrons orbit the nucleus in fixed circular orbits with quantised angular momentum",
+    "correct_answers": [
+      "electrons in fixed orbits"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Meissner effect in superconductors?",
+    "best_answer": "The complete expulsion of magnetic flux from the interior of a superconductor when it transitions below the critical temperature",
+    "correct_answers": [
+      "complete expulsion of magnetic flux",
+      "perfect diamagnetism below critical temperature"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for angular velocity in terms of period?",
+    "best_answer": "\u03c9 = 2\u03c0/T",
+    "correct_answers": [
+      "\u03c9 = 2\u03c0/T"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Pauli exclusion principle?",
+    "best_answer": "No two identical fermions can occupy the same quantum state simultaneously",
+    "correct_answers": [
+      "no two identical fermions in the same quantum state",
+      "no two fermions with identical quantum numbers"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the Debye temperature of copper in Kelvin?",
+    "best_answer": "Approximately 343 K",
+    "correct_answers": [
+      "343 K",
+      "approximately 340 K",
+      "343 Kelvin"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the critical density of the universe?",
+    "best_answer": "\u03c1_c = 3H\u00b2/8\u03c0G",
+    "correct_answers": [
+      "3H\u00b2/8\u03c0G"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Fermi-Dirac distribution?",
+    "best_answer": "f(E) = 1/(exp((E\u2212E_F)/k_BT) + 1)",
+    "correct_answers": [
+      "1/(e^((E-EF)/kT) + 1)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Fermi energy of a free electron gas?",
+    "best_answer": "E_F = (\u210f\u00b2/2m\u2091)(3\u03c0\u00b2n)^(2/3)",
+    "correct_answers": [
+      "(h-bar squared over 2m)(3\u03c0\u00b2n)^(2/3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the period of a simple pendulum for small angles?",
+    "best_answer": "T = 2\u03c0\u221a(L/g)",
+    "correct_answers": [
+      "T = 2\u03c0\u221a(L/g)",
+      "2pi sqrt(L/g)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the vorticity of a fluid element?",
+    "best_answer": "\u03c9 = \u2207 \u00d7 v (curl of the velocity field)",
+    "correct_answers": [
+      "curl of velocity",
+      "\u2207 \u00d7 v",
+      "rotation of the velocity vector field"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is length contraction in special relativity?",
+    "best_answer": "L = L\u2080/\u03b3",
+    "correct_answers": [
+      "L = L\u2080/\u03b3",
+      "L = L\u2080\u221a(1-v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the critical field in a superconductor (Type I)?",
+    "best_answer": "B_c(T) = B_c(0)[1 \u2212 (T/T_c)\u00b2]",
+    "correct_answers": [
+      "parabolic decrease with temperature",
+      "B_c0(1-(T/Tc)\u00b2)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the gravitational field inside a uniform sphere?",
+    "best_answer": "g(r) = \u2212(GM/R\u00b3)r, proportional to r",
+    "correct_answers": [
+      "g = GM r/R\u00b3",
+      "proportional to r inside sphere"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the dispersion relation for an EM wave in vacuum?",
+    "best_answer": "\u03c9 = ck",
+    "correct_answers": [
+      "\u03c9 = ck"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the resonance frequency of an LC circuit?",
+    "best_answer": "f\u2080 = 1/(2\u03c0\u221a(LC))",
+    "correct_answers": [
+      "1/(2\u03c0\u221aLC)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is nuclear fission?",
+    "best_answer": "The splitting of a heavy nucleus into lighter nuclei, releasing energy",
+    "correct_answers": [
+      "splitting of heavy nucleus into smaller parts"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Clausius-Clapeyron equation?",
+    "best_answer": "dP/dT = L/(T\u0394V)",
+    "correct_answers": [
+      "dP/dT = L/T\u00b7\u0394V"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the resonance frequency of an LC circuit?",
+    "best_answer": "f\u2080 = 1/(2\u03c0\u221a(LC))",
+    "correct_answers": [
+      "1/(2\u03c0\u221aLC)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the electric potential energy between two charges?",
+    "best_answer": "U = kq\u2081q\u2082/r",
+    "correct_answers": [
+      "kq\u2081q\u2082/r"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the frequency of a mass-spring system?",
+    "best_answer": "f = (1/2\u03c0)\u221a(k/m)",
+    "correct_answers": [
+      "(1/2\u03c0)\u221a(k/m)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the allowed orbital angular momentum quantum numbers l for the principal quantum number n = 4?",
+    "best_answer": "l = 0, 1, 2, 3",
+    "correct_answers": [
+      "0, 1, 2, 3",
+      "l = 0 to 3",
+      "s p d f"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the de Broglie wavelength of an electron accelerated through a potential difference of 100 V?",
+    "best_answer": "Approximately 1.23 \u00c5 (0.123 nm)",
+    "correct_answers": [
+      "1.23 \u00c5",
+      "0.123 nm",
+      "approximately 1.23 angstroms"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for entropy using microstates?",
+    "best_answer": "S = k_B ln \u03a9",
+    "correct_answers": [
+      "S = kB ln \u03a9",
+      "k ln W"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Larmor radiation formula?",
+    "best_answer": "P = q\u00b2a\u00b2/6\u03c0\u03b5\u2080c\u00b3",
+    "correct_answers": [
+      "q\u00b2a\u00b2/(6\u03c0\u03b5\u2080c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the magnetic susceptibility from Curie's law?",
+    "best_answer": "\u03c7 = C/T",
+    "correct_answers": [
+      "C/T",
+      "susceptibility inversely proportional to temperature"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the magnetic force on a current-carrying conductor?",
+    "best_answer": "F = BIL sin\u03b8",
+    "correct_answers": [
+      "F = BIL",
+      "BIL sin\u03b8"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the impedance of an inductor?",
+    "best_answer": "Z_L = j\u03c9L",
+    "correct_answers": [
+      "j\u03c9L",
+      "X_L = \u03c9L"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a conservative force?",
+    "best_answer": "A force for which work done is independent of path",
+    "correct_answers": [
+      "path-independent force"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the critical velocity for the onset of turbulent flow in a pipe of radius r with fluid of kinematic viscosity \u03bd? (Re \u2248 2300)",
+    "best_answer": "Approximately v = 2300\u03bd/2r = 1150\u03bd/r",
+    "correct_answers": [
+      "1150\u03bd/r",
+      "Re\u00b7\u03bd/D where Re \u2248 2300"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the self-inductance of a solenoid?",
+    "best_answer": "L = \u03bc\u2080n\u00b2Al",
+    "correct_answers": [
+      "\u03bc\u2080n\u00b2Al",
+      "mu zero n squared times volume"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Doppler effect?",
+    "best_answer": "The change in observed frequency due to relative motion between source and observer",
+    "correct_answers": [
+      "frequency change due to relative motion"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Bernoulli's equation?",
+    "best_answer": "P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant",
+    "correct_answers": [
+      "P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Maxwell speed distribution?",
+    "best_answer": "Probability distribution for speeds of particles in an ideal gas at thermal equilibrium",
+    "correct_answers": [
+      "distribution of particle speeds at equilibrium"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the wavelength shift in Compton scattering when the photon scatters through 90 degrees?",
+    "best_answer": "\u0394\u03bb = h/m_e\u00b7c = 2.43 \u00d7 10\u207b\u00b9\u00b2 m",
+    "correct_answers": [
+      "2.43 \u00d7 10\u207b\u00b9\u00b2 m",
+      "h/mc",
+      "Compton wavelength 2.43 pm"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the number of atoms in an FCC unit cell?",
+    "best_answer": "4 atoms per unit cell",
+    "correct_answers": [
+      "4",
+      "four"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Planck length?",
+    "best_answer": "l_P = \u221a(\u210fG/c\u00b3) \u2248 1.616 \u00d7 10\u207b\u00b3\u2075 m",
+    "correct_answers": [
+      "sqrt(\u210fG/c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the group velocity of a wave packet?",
+    "best_answer": "v_g = d\u03c9/dk",
+    "correct_answers": [
+      "d\u03c9/dk"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Poynting vector?",
+    "best_answer": "S = E \u00d7 H \u2014 energy flux of EM field",
+    "correct_answers": [
+      "S = E \u00d7 H",
+      "E cross H"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the continuity equation in electromagnetism?",
+    "best_answer": "\u2202\u03c1/\u2202t + \u2207\u00b7J = 0",
+    "correct_answers": [
+      "\u2202\u03c1/\u2202t + \u2207\u00b7J = 0"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the second law of thermodynamics?",
+    "best_answer": "Entropy of an isolated system never decreases",
+    "correct_answers": [
+      "entropy increases",
+      "entropy of isolated system never decreases"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Ampere's law?",
+    "best_answer": "\u222eB\u00b7dl = \u03bc\u2080I \u2014 line integral of B around closed loop equals \u03bc\u2080 times enclosed current",
+    "correct_answers": [
+      "\u222eB\u00b7dl = \u03bc\u2080I"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the drift velocity in Ohm's law?",
+    "best_answer": "v_d = J/(ne)",
+    "correct_answers": [
+      "J/ne",
+      "I/nAe"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is nuclear fusion?",
+    "best_answer": "Combining of light nuclei to form a heavier nucleus, releasing energy",
+    "correct_answers": [
+      "light nuclei combining to release energy"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the quantum number determining the shape of an orbital?",
+    "best_answer": "The azimuthal quantum number l",
+    "correct_answers": [
+      "l",
+      "orbital angular momentum quantum number"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the relativistic Lorentz factor?",
+    "best_answer": "\u03b3 = 1/\u221a(1 \u2212 v\u00b2/c\u00b2)",
+    "correct_answers": [
+      "1/sqrt(1 - v\u00b2/c\u00b2)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Clausius-Clapeyron equation?",
+    "best_answer": "dP/dT = L/(T\u0394V)",
+    "correct_answers": [
+      "dP/dT = L/T\u00b7\u0394V"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the virial theorem for a system of particles interacting via a power-law potential V \u221d r\u207f?",
+    "best_answer": "2\u27e8KE\u27e9 = n\u27e8PE\u27e9",
+    "correct_answers": [
+      "2<KE> = n<PE>",
+      "twice kinetic energy equals n times potential energy"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for entropy using microstates?",
+    "best_answer": "S = k_B ln \u03a9",
+    "correct_answers": [
+      "S = kB ln \u03a9",
+      "k ln W"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Larmor radiation formula?",
+    "best_answer": "P = q\u00b2a\u00b2/6\u03c0\u03b5\u2080c\u00b3",
+    "correct_answers": [
+      "q\u00b2a\u00b2/(6\u03c0\u03b5\u2080c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the radiation pressure of an EM wave?",
+    "best_answer": "P = I/c (absorbed) or P = 2I/c (reflected)",
+    "correct_answers": [
+      "I/c",
+      "radiation pressure"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Young's modulus?",
+    "best_answer": "Ratio of tensile stress to tensile strain",
+    "correct_answers": [
+      "stress divided by strain"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for kinetic energy?",
+    "best_answer": "KE = \u00bdmv\u00b2",
+    "correct_answers": [
+      "\u00bdmv\u00b2",
+      "KE = \u00bdmv\u00b2"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Hund's first rule?",
+    "best_answer": "Maximise total spin S for ground state",
+    "correct_answers": [
+      "maximise S",
+      "electrons fill orbitals to maximise spin"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the unit of capacitance?",
+    "best_answer": "Farad (F)",
+    "correct_answers": [
+      "Farad",
+      "F"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the de Broglie wavelength?",
+    "best_answer": "\u03bb = h/p",
+    "correct_answers": [
+      "\u03bb = h/p",
+      "h over momentum"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Coulomb's law?",
+    "best_answer": "F = kq\u2081q\u2082/r\u00b2",
+    "correct_answers": [
+      "F = kq\u2081q\u2082/r\u00b2",
+      "k q1 q2 over r squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Lenz's law?",
+    "best_answer": "An induced current opposes the change in flux that caused it",
+    "correct_answers": [
+      "induced current opposes flux change"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for electrical resistance in terms of resistivity?",
+    "best_answer": "R = \u03c1L/A",
+    "correct_answers": [
+      "R = \u03c1L/A"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the velocity selector condition?",
+    "best_answer": "E = vB (electric force equals magnetic force)",
+    "correct_answers": [
+      "E = vB",
+      "qE = qvB"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Larmor radiation formula?",
+    "best_answer": "P = q\u00b2a\u00b2/6\u03c0\u03b5\u2080c\u00b3",
+    "correct_answers": [
+      "q\u00b2a\u00b2/(6\u03c0\u03b5\u2080c\u00b3)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for pressure?",
+    "best_answer": "P = F/A",
+    "correct_answers": [
+      "P = F/A",
+      "force divided by area"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is nuclear fission?",
+    "best_answer": "The splitting of a heavy nucleus into lighter nuclei, releasing energy",
+    "correct_answers": [
+      "splitting of heavy nucleus into smaller parts"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the spin-orbit coupling energy in hydrogen?",
+    "best_answer": "\u0394E \u221d (1/r\u00b3) L\u00b7S",
+    "correct_answers": [
+      "proportional to L dot S / r\u00b3"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the coefficient of performance of an ideal refrigerator operating between 250 K and 300 K?",
+    "best_answer": "5",
+    "correct_answers": [
+      "5",
+      "COP = 5",
+      "coefficient of performance equals 5"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the energy of the nth level in hydrogen?",
+    "best_answer": "E_n = -13.6 eV/n\u00b2",
+    "correct_answers": [
+      "\u221213.6/n\u00b2 eV"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the orbital period of the International Space Station in minutes?",
+    "best_answer": "Approximately 92 minutes",
+    "correct_answers": [
+      "92 minutes",
+      "approximately 92 minutes",
+      "about 92 minutes"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the angular momentum of a particle in a central potential?",
+    "best_answer": "L = r \u00d7 p",
+    "correct_answers": [
+      "r cross p"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is work done by a constant force?",
+    "best_answer": "W = F\u00b7d\u00b7cos\u03b8",
+    "correct_answers": [
+      "W = Fd cos\u03b8"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is specific heat capacity?",
+    "best_answer": "Heat energy per unit mass per degree temperature rise",
+    "correct_answers": [
+      "heat per unit mass per degree"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a transformer do?",
+    "best_answer": "Changes the voltage of an AC supply",
+    "correct_answers": [
+      "steps voltage up or down",
+      "changes AC voltage"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the displacement current in Maxwell's equations?",
+    "best_answer": "J_D = \u03b5\u2080 \u2202E/\u2202t",
+    "correct_answers": [
+      "\u03b5\u2080 \u2202E/\u2202t"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Ohm's law?",
+    "best_answer": "V = IR",
+    "correct_answers": [
+      "V = IR",
+      "voltage equals current times resistance"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Boltzmann constant?",
+    "best_answer": "k_B = 1.38 \u00d7 10\u207b\u00b2\u00b3 J/K",
+    "correct_answers": [
+      "1.38 \u00d7 10\u207b\u00b2\u00b3 J/K"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the photoelectric effect?",
+    "best_answer": "Emission of electrons from a material when light of sufficient frequency shines on it",
+    "correct_answers": [
+      "electrons emitted when light hits metal"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the self-inductance EMF?",
+    "best_answer": "EMF = \u2212L dI/dt",
+    "correct_answers": [
+      "\u2212L dI/dt",
+      "minus L di/dt"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is a phonon?",
+    "best_answer": "A quantised lattice vibration in a crystal",
+    "correct_answers": [
+      "quanta of lattice vibration"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the virial theorem for a system of particles interacting via a power-law potential V \u221d r\u207f?",
+    "best_answer": "2\u27e8KE\u27e9 = n\u27e8PE\u27e9",
+    "correct_answers": [
+      "2<KE> = n<PE>",
+      "twice kinetic energy equals n times potential energy"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for centripetal acceleration?",
+    "best_answer": "a = v\u00b2/r",
+    "correct_answers": [
+      "v\u00b2/r",
+      "a = v\u00b2/r"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the electric field of an infinite plane sheet?",
+    "best_answer": "E = \u03c3/2\u03b5\u2080",
+    "correct_answers": [
+      "\u03c3/2\u03b5\u2080"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Bernoulli's equation?",
+    "best_answer": "P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant",
+    "correct_answers": [
+      "P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Hubble constant approximately in km/s/Mpc (as of recent measurements)?",
+    "best_answer": "Approximately 67-73 km/s/Mpc (tension between measurements)",
+    "correct_answers": [
+      "67-73 km/s/Mpc",
+      "approximately 70 km/s/Mpc",
+      "around 67 to 73"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the formula for the period of a simple pendulum for small angles?",
+    "best_answer": "T = 2\u03c0\u221a(L/g)",
+    "correct_answers": [
+      "T = 2\u03c0\u221a(L/g)",
+      "2pi sqrt(L/g)"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the Bohr radius?",
+    "best_answer": "a\u2080 \u2248 0.529 \u00c5",
+    "correct_answers": [
+      "0.529 \u00c5",
+      "0.529 \u00d7 10\u207b\u00b9\u2070 m"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does E = mc\u00b2 express?",
+    "best_answer": "Mass and energy equivalence",
+    "correct_answers": [
+      "mass-energy equivalence",
+      "energy equals mass times c squared"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the formula for the electric flux?",
+    "best_answer": "\u03a6 = \u222bE\u00b7dA = Q_enc/\u03b5\u2080",
+    "correct_answers": [
+      "Q_enclosed / \u03b5\u2080",
+      "E dot A"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Stefan-Boltzmann constant in W\u00b7m\u207b\u00b2\u00b7K\u207b\u2074?",
+    "best_answer": "5.67 \u00d7 10\u207b\u2078 W\u00b7m\u207b\u00b2\u00b7K\u207b\u2074",
+    "correct_answers": [
+      "5.67 \u00d7 10\u207b\u2078",
+      "5.670 \u00d7 10\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the force per unit length between two parallel wires carrying currents I\u2081 and I\u2082, separated by distance d?",
+    "best_answer": "F/l = \u03bc\u2080I\u2081I\u2082/2\u03c0d",
+    "correct_answers": [
+      "\u03bc\u2080I\u2081I\u2082/2\u03c0d",
+      "mu zero I1 I2 over 2 pi d"
+    ],
+    "category": "Physics",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the work-energy theorem?",
+    "best_answer": "Net work equals change in kinetic energy",
+    "correct_answers": [
+      "W = \u0394KE"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Poisson equation in electrostatics?",
+    "best_answer": "\u2207\u00b2V = \u2212\u03c1/\u03b5\u2080",
+    "correct_answers": [
+      "\u2207\u00b2V = -\u03c1/\u03b5\u2080"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the Debye temperature?",
+    "best_answer": "\u03b8_D = \u210f\u03c9_D/k_B",
+    "correct_answers": [
+      "hbar omega_D / kB"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the electric field inside a parallel plate capacitor?",
+    "best_answer": "E = V/d",
+    "correct_answers": [
+      "V/d",
+      "\u03c3/\u03b5\u2080"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Poynting vector?",
+    "best_answer": "S = E \u00d7 H \u2014 energy flux of EM field",
+    "correct_answers": [
+      "S = E \u00d7 H",
+      "E cross H"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the refractive index using permittivity and permeability?",
+    "best_answer": "n = \u221a(\u03b5_r \u03bc_r)",
+    "correct_answers": [
+      "sqrt(\u03b5_r \u03bc_r)"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is Lenz's law?",
+    "best_answer": "An induced current opposes the change in flux that caused it",
+    "correct_answers": [
+      "induced current opposes flux change"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the Gibbs free energy condition for spontaneous processes?",
+    "best_answer": "G = H \u2212 TS; spontaneous when \u0394G < 0",
+    "correct_answers": [
+      "\u0394G < 0 at constant T and P"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the formula for the energy density of an electric field?",
+    "best_answer": "u = \u00bd\u03b5\u2080E\u00b2",
+    "correct_answers": [
+      "\u00bd\u03b5\u2080E\u00b2"
+    ],
+    "category": "Physics_Medium",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the Hall effect?",
+    "best_answer": "Development of a transverse voltage across a current-carrying conductor in a magnetic field",
+    "correct_answers": [
+      "transverse voltage in conductor in magnetic field"
+    ],
+    "category": "Physics_Easy",
+    "difficulty": "easy"
+  }
+]

@@ -1,21 +1,33 @@
-import json 
+import json
 import ollama
 import numpy as np
 from scipy.spatial.distance import cosine
-questions=[]
+from dotenv import set_key
 
-with open("questions_400.jsonl","r",encoding="utf-8") as file:
-    data=json.load(file)
+questions = []
+
+with open("physics_700.json", "r", encoding="utf-8") as file:
+    data = json.load(file)
+
 for item in data:
     questions.append(item["question"])
-embeddings=[]
+
+
+# Generate embeddings
+embeddings = []
+
 for question in questions:
-    response=ollama.embed(
+    response = ollama.embed(
         model="nomic-embed-text",
         input=question
     )
+
     embeddings.append(response["embeddings"][0])
+
 print("Embeddings generated:", len(embeddings))
+
+
+# Calculate centroid
 centroid = []
 
 for i in range(len(embeddings[0])):
@@ -28,33 +40,69 @@ for i in range(len(embeddings[0])):
 
 print("Centroid length:", len(centroid))
 
+
+# Calculate distances
 distances = []
 
-for i, embedding in enumerate(embeddings):
+for embedding in embeddings:
 
     distance = cosine(embedding, centroid)
 
-    distances.append({
-        "question": questions[i],
-        "distance": distance
+    distances.append(distance)
+
+
+# Sort distances
+sorted_results = sorted(
+    enumerate(distances, start=1),
+    key=lambda x: x[1]
+)
+
+
+# Print results
+for question_number, distance in sorted_results:
+
+    print(
+        f"{question_number:3d} | "
+        f"{distance:.6f} | "
+        f"{questions[question_number - 1]}"
+    )
+
+
+# Calculate 95th percentile threshold
+threshold = np.percentile(distances, 95)
+
+print("Threshold:", threshold)
+
+
+# Store ONLY question number, question and distance
+results = []
+
+for question_number, distance in sorted_results:
+
+    results.append({
+        "question_number": question_number,
+        "question": questions[question_number - 1],
+        "distance": float(distance)
     })
 
-distances.sort(key=lambda x: x["distance"])
 
-for i, item in enumerate(distances, start=1):
-    print(
-        f"{i:3d} | "
-        f"{item['distance']:.6f} | "
-        f"{item['question']}"
-    )
-distance_values=[item["distance"] for item in distances]
+with open("threshold_results.json", "w", encoding="utf-8") as file:
+    json.dump(results, file, indent=2)
 
-threshold=np.percentile(distance_values,95)
 
-print("Threshold:",threshold)
-with open("threshold_results.json","w",encoding="utf-8") as file:
-    json.dump({
-        "threshold":float(threshold),
-        "centroid":centroid,
-        "distances":distances
-    },file)
+# Store threshold and centroid directly in .env
+env_file = ".env"
+
+set_key(
+    env_file,
+    "THRESHOLD",
+    str(float(threshold))
+)
+
+set_key(
+    env_file,
+    "CENTROID",
+    json.dumps(centroid)
+)
+
+print("THRESHOLD and CENTROID saved to .env")

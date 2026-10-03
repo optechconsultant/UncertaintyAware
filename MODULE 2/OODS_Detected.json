@@ -1,0 +1,107 @@
+[
+  {
+    "question_number": 2,
+    "question": "What is mean free path?",
+    "distance": 0.4666511158031732
+  },
+  {
+    "question_number": 21,
+    "question": "What does a capacitor store?",
+    "distance": 0.41214874458396566
+  },
+  {
+    "question_number": 96,
+    "question": "What is the main-sequence lifetime of the Sun in years?",
+    "distance": 0.4009410303082537
+  },
+  {
+    "question_number": 98,
+    "question": "What are the three types of radioactive decay?",
+    "distance": 0.3783940299960672
+  },
+  {
+    "question_number": 108,
+    "question": "What is a standing wave?",
+    "distance": 0.40808168479338003
+  },
+  {
+    "question_number": 117,
+    "question": "What does a capacitor store?",
+    "distance": 0.41214874458396566
+  },
+  {
+    "question_number": 131,
+    "question": "What is a conservative force?",
+    "distance": 0.43366001857741177
+  },
+  {
+    "question_number": 141,
+    "question": "What is nuclear fission?",
+    "distance": 0.4129723690472079
+  },
+  {
+    "question_number": 145,
+    "question": "What is nuclear fusion?",
+    "distance": 0.419586192647907
+  },
+  {
+    "question_number": 156,
+    "question": "What is total internal reflection?",
+    "distance": 0.39164340346348714
+  },
+  {
+    "question_number": 159,
+    "question": "What is a standing wave?",
+    "distance": 0.40808168479338003
+  },
+  {
+    "question_number": 166,
+    "question": "What is the half-life of Carbon-14 in years?",
+    "distance": 0.38120229588533694
+  },
+  {
+    "question_number": 171,
+    "question": "What does a capacitor store?",
+    "distance": 0.41214874458396566
+  },
+  {
+    "question_number": 189,
+    "question": "What is a conservative force?",
+    "distance": 0.43366001857741177
+  },
+  {
+    "question_number": 219,
+    "question": "What is nuclear fission?",
+    "distance": 0.4129723690472079
+  },
+  {
+    "question_number": 231,
+    "question": "What is a conservative force?",
+    "distance": 0.43366001857741177
+  },
+  {
+    "question_number": 234,
+    "question": "What is the Doppler effect?",
+    "distance": 0.3801336326465332
+  },
+  {
+    "question_number": 246,
+    "question": "What is nuclear fusion?",
+    "distance": 0.419586192647907
+  },
+  {
+    "question_number": 265,
+    "question": "What is nuclear fission?",
+    "distance": 0.4129723690472079
+  },
+  {
+    "question_number": 273,
+    "question": "What does a transformer do?",
+    "distance": 0.4253526802699432
+  },
+  {
+    "question_number": 279,
+    "question": "What is a phonon?",
+    "distance": 0.39255989781740674
+  }
+]

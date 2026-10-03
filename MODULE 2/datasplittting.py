@@ -1,17 +1,25 @@
 import json
 
 input_file = "physics_1000.jsonl"
-output_file = "questions_400.jsonl"
+
+train_file = "physics_700.json"
+test_file = "physics_300.json"
 
 # Read the 1000 questions
 with open(input_file, "r", encoding="utf-8") as file:
     questions = [json.loads(line) for line in file if line.strip()]
 
-# Take the first 400 questions
-questions_400 = questions[:400]
+# Split into 700 and 300
+questions_700 = questions[:700]
+questions_300 = questions[700:1000]
 
-# Write them to a new JSON file
-with open(output_file, "w", encoding="utf-8") as file:
-    json.dump(questions_400, file, indent=2)
+# Write the 700 questions
+with open(train_file, "w", encoding="utf-8") as file:
+    json.dump(questions_700, file, indent=2)
 
-print(f"Extracted {len(questions_400)} questions.")
+# Write the 300 questions
+with open(test_file, "w", encoding="utf-8") as file:
+    json.dump(questions_300, file, indent=2)
+
+print(f"Reference questions: {len(questions_700)}")
+print(f"Test questions: {len(questions_300)}")
